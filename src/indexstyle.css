@@ -6,19 +6,19 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*.imagen{
+/* .imagen{ 
   background-image:url(./imagenes/generales/banderas.png)
-  opacity: 0.3;
+  background-color: transparent
   position: absolute;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-} */
+}*/
 body {
- /* background: url(./banderas.png);*/
-  /*background-image:url(./imagenes/generales/banderas4.png);*/
-  background-color: transparent;
-  /*opacity: 0.3;*/
+  /* background: url(./banderas.png); */
+  /* backdrop-filter: url(./imagenes/generales/banderas.png) greyscale(75%) opacity(0.5); */
+  /* background-color: transparent; */
+  /* opacity: 0.3;  */
   position: absolute;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -27,8 +27,9 @@ body {
   right: 0%;
   top: 0%;
   bottom: 0%;
- /*filter: grayscale(75%);*/
- }
+  /* backdrop-filter: grayscale (70%) opacity (0.3); */
+  /* filter: grayscale(75%); */
+  }
 #menu{
   padding: 5%;
   /* display: flex; */
