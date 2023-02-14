@@ -1,4 +1,6 @@
-import { example } from './data.js';
+
+//aqui se deben agregar las demas importaciones
+import { buscarNombre } from './data.js'; //aqui se deben agregar las demas importaciones
 // import { example } from '../data/athletes/athletes.js';
 // import data from './data/lol/lol.js';
 
@@ -6,4 +8,4 @@ import { example } from './data.js';
 import data from './data/athletes/athletes.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+console.log(buscarNombre, data);
