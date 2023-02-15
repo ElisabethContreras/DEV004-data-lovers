@@ -21,20 +21,19 @@
   font-size: 15px;
 }
 body { 
-   /* background: url(./banderas.png); */
-   /* background-color: grayscale(75%); */
-  /* background-image:url(./imagenes/banderas.png) ; */
-  /* background-color: transparent; */
-  position: absolute;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  /* backdrop-filter: grayscale (70%) opacity (0.3); */
-  /* filter: grayscale(75%); */
+ /* background: url(./imagenes/generales/Imagen4transp98.png); */
+ background: url(./Imagenes/generales/posibles/Imagen3transp95.png);
+ /* background: url(./imagenes/generales/banderas.png); */
+ /* background-color: grayscale(75%); */
+/* background-image:url(./imagenes/banderas.png) ; */
+/* background-color: transparent; */
+background-repeat: repeat;
+/* background-size: 100%; */
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
 } 
 #menu{
   padding: 5%;
