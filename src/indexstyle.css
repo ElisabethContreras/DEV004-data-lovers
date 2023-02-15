@@ -6,19 +6,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* .imagen{
-  background-image:url(./imagenes/generales/banderas.png)
-  background-color: transparent
-  position: absolute;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}*/
-body {
-  /* background: url(./banderas.png); */
-  /* backdrop-filter: url(./imagenes/generales/banderas.png) greyscale(75%) opacity(0.5); */
+body { 
+   /* background: url(./banderas.png); */
+   /* background-color: grayscale(75%); */
+  /* background-image:url(./imagenes/banderas.png) ; */
   /* background-color: transparent; */
-  /* opacity: 0.3;  */
   position: absolute;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,27 +21,112 @@ body {
   bottom: 0%;
   /* backdrop-filter: grayscale (70%) opacity (0.3); */
   /* filter: grayscale(75%); */
-  }
+} 
 #menu{
   padding: 5%;
   /* display: flex; */
-  outline: 1px solid  turquoise;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+  /* outline: 1px solid turquoise; */
 }
+#contenedor-cabecera>.logo-cabecera{
+  padding: 0.5px;
+  height: 100px;
+  
+ 
+}
+#contenedor-cabecera>.logo-cabecera>.logo-cabecera-uno {
+  /* padding: 5px; */
+  width: 100%;
+  height: 100px;
+  /* background-size: 100px; */
+}
+#contenedor-cabecera>.logo-cabecera>.logo-cabecera-dos {
+  /* padding: 5px; */
+  width: 100px;
+  height: 100px;
+  display: flex;
+
+  position: relative;
+  top: -105px ;
+  
+  left: 48%;
+  /* display: block; */
+  /* display: flex;
+  justify-content: center;  */
+  
+  /* background-size: 100px; */
+  
+}
+/* ------------------------------ */
+
+
+/* COMIENZA EL CONTENEDOR-MENU */
+#contenedorMenu {
+  /* width: 1200px; */
+  width: 100%;
+  /* max-width: 2000px; */
+  height: 50%;
+  /* margin: 10px auto; */
+  /* border: 10px solid green; */
+  padding: 2%;
+  /* padding-top: 5%; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  justify-content: space-around;
+  /* outline: 1px solid turquoise; */
+}
+
+/* al colocar el id y llamar a una clase que se encuentra anidada dentro del id*/
+#contenedorMenu>.imagen-izq {
+  padding: 30px;
+  /* border-radius: 50%; */
+}
+.gif-uno{
+  border-radius: 50%;
+}
+
+#contenedorMenu>.imagen-der {
+  padding: 30px;
+}
+
+#contenedorMenu>.imagen-texto {
+  width: 600px;
+  padding: 30px;
+}
+.btn-uno{
+  /* margin-left: 30%; */
+  position: relative;
+  top: -20px;
+  left: 40%;
+  /* flex-grow: 2; */
+  
+  /* top: 40%; */
+}
+.texto-uno{
+  margin-top: 3%;
+  margin-left: 1%;
+  /* flex-grow: 0; */
+}
+/* ------------------------------ */
+
 
 .imagenes {
   margin-top: 20px;    /* margen superior */
   margin-left: 50px;
-  margin-bottom: 10%;  /* margen inferior */
-  outline: 6px solid violet;
+  /* margin-bottom: 0.5%;  margen inferior */
+  /* outline: 6px solid violet; */
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .slider{
   width: 300px;
   height: 300px;
   border-radius: 3%; /*el borde redondeado,se ve con outline*/
   overflow: hidden; /*que esconda el lo que se ve si se desborda*/
-  outline: 6px solid red;
+  /* outline: 6px solid red; */
 }
 .slides input{
   display: none;
@@ -58,7 +135,7 @@ body {
   width: 200%; /*el % del tamaño de ña pantalla*/
   height: 200px;
   display: flex;
-  outline: 6px solid green;
+  /* outline: 6px solid green; */
 }
 .slide{
   width: 20%; /*porcentaje que ocupara la imagen en el slider*/
@@ -94,35 +171,42 @@ body {
 /*esta seccion me permite dar movimiento a las imagenes*/
 #radio1:checked ~ .first{ /*checked=asigna el tamaño de los puntitos, funciona con los checkbox, option, checked, radio*/
   margin-left: 0; /*ubicacion de las imagenes de la clase first*/
-  outline: 6px  solid yellow;
+  /* outline: 6px  solid yellow; */
 }
 
 #radio2:checked ~ .first{
   margin-left: -20%;
-  outline: 6px  solid yellow;
+  /* outline: 6px  solid yellow; */
 }
 
 #radio3:checked ~ .first{
   margin-left: -40%;
-  outline: 6px  solid yellow;
+  /* outline: 6px  solid yellow; */
 }
 
 #radio4:checked ~ .first{
   margin-left: -60%;
-  outline: 6px  solid yellow;
+  /* outline: 6px  solid yellow; */
 }
 
 #radio5:checked ~ .first{
     margin-left: -80%;
-    outline: 6px  solid yellow;
+    /* outline: 6px  solid yellow; */
 }
 
 #radio6:checked ~ .first{
  margin-left: -100%;
- outline: 6px  solid yellow;
+ /* outline: 6px  solid yellow; */
 }
-/*Pantalla de 800-1280*/
-@media screen and (min-width: 670px) and (max-width: 1280px) {
+
+.footer{
+  padding: 1px;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: small;
+}
+/*Pantalla de 670-1600 800-1280*/
+@media screen and (min-width: 670px) and (max-width: 1600px) {
   /* .man-header{
     display:flex;
     height: 180px;
@@ -167,12 +251,12 @@ body {
     margin-top:-50px;/* margen superior *//* -420px; /*ori -90 */ /* altura donde va ubicado la barra de los puntitos*/
     display: flex;
     justify-content: flex-start; /*flexible al inicio /*left; /*center;*/
-    outline: 2px solid red
+    /* outline: 2px solid red */
   }
 }
 
 /*Pantalla 200-670*/
-@media screen and (min-width: 200px) and (max-width: 670px) {
+@media screen and (min-width: 200px) and (max-width: 669px) {
   /* .title-home {
     font-size: 6vw;
     margin: 2%;
@@ -210,7 +294,7 @@ body {
     margin-left: 25px;
     display: flex;
     justify-content: center;
-    outline: 2px solid red
+    /* outline: 2px solid red */
   }
   .manual-btn:not(:last-child){ /* determina es espaciado entre los puntitos del slider*/
     margin-right: auto;/*10px;/*ori 30px;*/ 

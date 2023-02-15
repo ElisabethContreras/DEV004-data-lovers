@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- permite que sea respnsiva y que se acomode a cualquier tipo de dispositivo -->
 
     <link rel="shortcut icon" href="Imagenes/logo web/logo.png" type="image/x-icon"> <!-- insertar mini-logo en pestaña de inicio -->
-    <title>Juegos Olimpicos Rio Jainero 2016</title> <!-- nombre pestaña inicio -->
+    <title>JJOO Rio Jainero 2016 Home</title> <!-- nombre pestaña inicio -->
     <link rel="stylesheet" href="indexstyle.css" />
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
 
@@ -16,9 +16,11 @@
     
     <!-- Cabecera de la pagina -->
     <header>
-      <div class="man-header">
-        <div class="logo"><img class="logo-header" src="imagenes/generales/rio2.png" width="100" height="100" alt="" ></div>
-        <!-- <div class="title-home">Juegos Olimpicos</div> -->
+      <div id="contenedor-cabecera">
+        <div class="logo-cabecera">
+          <img class="logo-cabecera-uno" src="imagenes/generales/cabecera1.png" width="" height="" alt="" >
+          <img class="logo-cabecera-dos" src="imagenes/generales/rio2.png" width="" height="" alt="" >
+        </div>
       </div>
     </header>
     <!-- ********************** -->
@@ -74,41 +76,54 @@
         </p>
       </section>
       <!-- ********************** -->
-      
-    <section id="menu">
-      <nav class="nav-menu">
-        <button class="initial-button" onclick="window.location.href='./personagens.html'">Busca tu pais !!!</button>
-      </nav>
-    </section>
+    <div id="contenedorMenu">
+
+        <div class="imagen-izq" id="imagenIzq">
+          <!-- <img class="gif-uno" src="https://media.tenor.com/QcsJFmwmZtoAAAAC/olympics-rio.gif" alt="mascotasMov" width="150" height="150"></img> -->
+          <img class="gif-uno" src="./Imagenes/gif animados/antorcha.gif" alt="mascotasMov" width="150" height="150"></img>
+
+        </div>
+
+        <div class="imagen-texto">
+          <nav class="nav-menu">
+            <!-- <label for="btn-inicial">¿ Qué te gustaria hacer ? </label> -->
+            <p class="texto-uno">¿ Qué te gustaria hacer ? </p>
+            <br><br>
+            <button class="btn-uno" onclick="window.location.href='./atletas.html'">Ver todos los Atletas.</button>
+            <br><br>
+            <button class="btn-uno" onclick="window.location.href='./xxx.html'">Buscar un Pais.</button>
+          </nav>
+        </div>
+
+        <div class="imagen-der" id="imagenDer">
+          <img class="gif-uno" src="./Imagenes/gif animados/mascotas.gif" alt="mascotasMov" width="150" height="150"></img>
+        </div>
+    </div>  
+    
     
     <!-- <select class="filter" id="species-filter">
       <option id="Espécie" selected disabled hidden>Espécie</option>
 
-<option value="Alien">&🐶	; Alien</option>
+<option value="perro">&🐶	; Perro</option>
       <option value="chile">&#127752; &#x1f1e8; &#x1f1f1;chile</option>
-      <option value="Cronenberg">&#127464; &#127473; Chile 2</option>
-      <option value="unknown">&#127988; Desconhecido</option>
+      <option value="xxxx">&#127464; &#127473; Chile 2</option>
+      <option value="xxxx">&#127988; xxxxx</option>
       <option value="Disease"><i class="em em-flag-cl" aria-role="presentation" aria-label="Chile Flag"></i>	; Doença</option>
       <option value="Human">&#129485; Humano</option>
-      <option value="Humanoid">&#129503; Humanóide</option>
-      <option value="Mytholog">&#127993; Mitologia</option>
-      <option value="Parasite">&#128027; Parasita</option>
-      <option value="Poopybutthole">&#128169; Poopybutthole</option>
-      <option value="Robot">&#129302; Robô</option>
-      <option value="Vampire" >"Chile Flag", Vampiro &</option>
+     
       <i class="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
     </select>
     <i class="em em-bird" aria-role="presentation" aria-label="BIRD"></i>
     <i class="em em-flag-cl" aria-role="presentation" aria-label="Chile Flag"></i> -->
     
-      <div id="root"></div>
+      <!-- <div id="root"></div>
       <p>Selecciona el pais a buscar.</p>
       <select id="mySelect">
     
     
       </select>
     
-   
+    
     </main>
 
    
@@ -117,7 +132,11 @@
 
 
     <!-- <script type="text/javascript" src="/data/athletes/athletes.js"></script> -->
-    <!-- aqui script index.js llamo al contador del tiempo de transicion ente las imagenes del carrusel -->
-    <script src="index.js" type="module"></script> 
+    
+    <script src="index.js" type="module"></script> <!-- llamo al contador del tiempo de transicion ente las imagenes del carrusel -->
+ 
   </body>
+  <footer>
+    <p class="footer">@Copyright 2023 JJOO Rio 2016.Todos los derechos reservados</p>
+  </footer>
 </html>
