@@ -6,21 +6,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-.parrafo2{
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-}
-.parrafo3{
+ .parrafo1{
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   display: flex;
-  justify-content:space-around;
-  font-size: 15px;
+  justify-content:center;
+  font-size: 20px;
+  color: rgba(19, 17, 17, 0.911);
 }
-body { 
+.parrafo2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  color: rgba(19, 17, 17, 0.911);
+  line-height: 25px;/*interlineado*/
+  text-indent: 40px;/*sangría*/
+}
+
+body {
  /* background: url(./imagenes/generales/Imagen4transp98.png); */
  background: url(./Imagenes/generales/posibles/Imagen3transp95.png);
  /* background: url(./imagenes/generales/banderas.png); */
@@ -34,7 +39,7 @@ left: 0%;
 right: 0%;
 top: 0%;
 bottom: 0%;
-} 
+}
 #menu{
   padding: 5%;
   /* display: flex; */
@@ -74,7 +79,6 @@ bottom: 0%;
 }
 /* ------------------------------ */
 
-
 /* COMIENZA EL CONTENEDOR-MENU */
 #contenedorMenu {
   /* width: 1200px; */
@@ -91,7 +95,6 @@ bottom: 0%;
   justify-content: space-around;
   /* outline: 1px solid turquoise; */
 }
-
 /* al colocar el id y llamar a una clase que se encuentra anidada dentro del id*/
 #contenedorMenu>.imagen-izq {
   padding: 30px;
@@ -122,6 +125,9 @@ bottom: 0%;
   margin-top: 3%;
   margin-left: 1%;
   /* flex-grow: 0; */
+  font-family: Arial, Helvetica, sans-serif;/*tipo de letra*/
+  font-size: 15px;/*tamaño de letra*/
+  color: rgba(19, 17, 17, 0.911); /*Color de fuente*/
 }
 /* ------------------------------ */
 
