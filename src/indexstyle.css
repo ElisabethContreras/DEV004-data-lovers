@@ -6,6 +6,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+.parrafo2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+.parrafo3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  display: flex;
+  justify-content:space-around;
+  font-size: 15px;
+}
 body { 
    /* background: url(./banderas.png); */
    /* background-color: grayscale(75%); */
