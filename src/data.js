@@ -1,3 +1,4 @@
+//Aqui van solo ls exportaciones de info.
 // estas funciones son de ejemplo
 
 // export const example = () => {
@@ -12,8 +13,8 @@
 //toLowerCase() : convierte la cadenaen minusculas
 //includes() : devuelve true/false si el dato buscado esta en el array
 export const buscarNombre = (infoAtletas, nombre) => {
-  const nombreBuscado=infoAthetas.filter((atleta)=>atleta.name.toLowerCase().includes(name.toLowerCase()));
-console.log(nombreBuscado); 
+  const nombreBuscado=infoAtletas.filter((atleta)=>atleta.nombre.toLowerCase().includes(nombre.toLowerCase()));
+  console.log(nombreBuscado);
   // return 'nombreBuscado';
 };
 

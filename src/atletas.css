@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url(./Imagenes/generales/posibles/Imagen3transp95.png);
+    background-repeat: repeat;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+.contenedor-tarjetas{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    /* display: inline-flex; */
+    flex-wrap: wrap;
+    flex-direction: row; /* el flex direction le dice la dirección de las cajas , en este caso en fila*/
+    align-content: center;
+    /* align-content: normal; */
+    /* align-items: center; */
+    /* align-self: stretch; */
+    justify-content: space-between;
+    font-size:medium;
+    /* outline: 2px solid turquoise; */
+  }
+  .infotarjetas {
+    padding: 2px;
+    text-align: left;
+    /* font-size: 14px; */
+    word-wrap: break-word;
+    /* transform: rotateY(180deg); */
+    /* outline: 2px solid orangered; */
+  }
+  .caja{
+    /* outline: 2px solid red; */
+  }
