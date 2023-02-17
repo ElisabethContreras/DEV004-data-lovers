@@ -15,24 +15,25 @@ const infoAtletas = data.athletes.slice(0,10); // aquí estoy guardando la infor
 function imprimirData (data){
   document.getElementById("contenedor-tarjetas").innerHTML=data.map((item)=>
     `<section class="caja">
-        <figure>
-        <img class="imagen-mascotas" src="Imagenes/logo web/logo.png" width="150" height="100" alt="" >
-         <figcaption class="trasera">
+        <a href="#">
+           <figure>
               <h2 class="nombre">${item.name}</h2>
-             <hr>
-                 <div class="infotarjetas">
-                    <p><strong> Sexo: </strong> ${item.gender} </p>
-                    <p><strong> Altura: </strong> ${item.height} </p>
-                    <p><strong> Peso: </strong> ${item.weight} </p>
-                    <p><strong> Disciplina: </strong> ${item.sport} </p>
-                    <p><strong> Equipo: </strong> ${item.team} </p>
-                    <p><strong> País: </strong> ${item.noc} </p>
-                    <p><strong> Edad: </strong> ${item.age} </p>
-                    <p><strong> Especialidad: </strong> ${item.event} </p>
-                    <p><strong> Medalla: </strong> ${item.medal} </p>
-                 </div>
-            </figcaption>
-        </figure>
+              <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
+                 <figcaption class="trasera">
+                    <div class="infotarjetas">
+                        <p><strong> Sexo: </strong> ${item.gender} </p>
+                        <p><strong> Altura: </strong> ${item.height} </p>
+                        <p><strong> Peso: </strong> ${item.weight} </p>
+                        <p><strong> Disciplina: </strong> ${item.sport} </p>
+                        <p><strong> Equipo: </strong> ${item.team} </p>
+                        <p><strong> País: </strong> ${item.noc} </p>
+                        <p><strong> Edad: </strong> ${item.age} </p>
+                        <p><strong> Especialidad: </strong> ${item.event} </p>
+                        <p><strong> Medalla: </strong> ${item.medal} </p>
+                    </div>
+                </figcaption>
+            </figure>
+        </a>
     </section>
     `).join("");// se creó un subtitulo "nombre", extrayendo del athletes.js
 }
