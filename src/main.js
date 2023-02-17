@@ -15,7 +15,6 @@ const infoAtletas = data.athletes.slice(0,10); // aquí estoy guardando la infor
 function imprimirData (data){
   document.getElementById("contenedor-tarjetas").innerHTML=data.map((item)=>
     `<section class="caja">
-        <a href="#">
            <figure>
               <h2 class="nombre">${item.name}</h2>
               <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
@@ -33,12 +32,11 @@ function imprimirData (data){
                     </div>
                 </figcaption>
             </figure>
-        </a>
+       
     </section>
     `).join("");// se creó un subtitulo "nombre", extrayendo del athletes.js
 }
 imprimirData(infoAtletas);
-
 
 //funciones, practicar como traer la data para que aparezca en la pag.2
 //20 datos de atletas para probar y hacer los test.
