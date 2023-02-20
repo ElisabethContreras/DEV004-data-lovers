@@ -38,6 +38,9 @@ function imprimirData (data){
 }
 imprimirData(infoAtletas);
 
+
+
+
 //funciones, practicar como traer la data para que aparezca en la pag.2
 //20 datos de atletas para probar y hacer los test.
 //Buscar el como hacer los test.
