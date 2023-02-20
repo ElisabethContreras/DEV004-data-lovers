@@ -20,15 +20,15 @@ function imprimirData (data){
               <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
                  <figcaption class="trasera">
                     <div class="infotarjetas">
-                        <p><strong> Sexo: </strong> ${item.gender} </p>
-                        <p><strong> Altura: </strong> ${item.height} </p>
-                        <p><strong> Peso: </strong> ${item.weight} </p>
-                        <p><strong> Disciplina: </strong> ${item.sport} </p>
-                        <p><strong> Equipo: </strong> ${item.team} </p>
-                        <p><strong> País: </strong> ${item.noc} </p>
-                        <p><strong> Edad: </strong> ${item.age} </p>
-                        <p><strong> Especialidad: </strong> ${item.event} </p>
-                        <p><strong> Medalla: </strong> ${item.medal} </p>
+                        <p class="tamaño-parrafo" ><strong class="tamaño-texto"> Sexo: </strong> ${item.gender} </p>
+                        <p class="tamaño-parrafo"><strong class="tamaño-texto"> Altura: </strong> ${item.height} </p>
+                        <p class="tamaño-parrafo"><strong class="tamaño-texto"> Peso: </strong> ${item.weight} </p>
+                        <p class="tamaño-parrafo"><strong class="tamaño-texto"> Disciplina: </strong> ${item.sport} </p>
+                        <p class="tamaño-parrafo"><strong class="tamaño-texto"> Equipo: </strong> ${item.team} </p>
+                        <p class="tamaño-parrafo"><strong class="tamaño-texto"> País: </strong> ${item.noc} </p>
+                        <p class="tamaño-parrafo"><strong class="tamaño-texto"> Edad: </strong> ${item.age} </p>
+                        <p class="tamaño-parrafo"><strong class="tamaño-texto"> Especialidad: </strong> ${item.event} </p>
+                        <p class="tamaño-parrafo"><strong class="tamaño-texto"> Medalla: </strong> ${item.medal} </p>
                     </div>
                 </figcaption>
             </figure>
