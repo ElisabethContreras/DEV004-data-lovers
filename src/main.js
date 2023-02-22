@@ -85,7 +85,7 @@ function llenadoOpcionesDisciplina(options_list) {
 }
 llenadoOpcionesDisciplina(athletes);
 
-function mostrarResultadosFiltrarDisciplina(event){
+function mostrarResultadosFiltrarDisciplina(){
   const valorSeleccionadoDisciplina=seleccionarDisciplina.value;
   const seleccionDisciplina= filtrarDisciplina(infoAtletas,valorSeleccionadoDisciplina);
   imprimirData(seleccionDisciplina);
