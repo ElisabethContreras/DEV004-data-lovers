@@ -1,6 +1,6 @@
 
 //aqui se deben agregar las demas importaciones
-import { buscarNombre, filtrarSexo } from './data.js'; //aqui se deben agregar las demas importaciones
+import { buscarNombre, filtrarSexo, filtrarDisciplina } from './data.js'; //aqui se deben agregar las demas importaciones
 import athletes from './data/athletes/athletes.js';
 // import { example } from '../data/athletes/athletes.js';
 // import data from './data/lol/lol.js';
@@ -10,6 +10,12 @@ import data from './data/athletes/athletes.js';
 console.log(buscarNombre, data);
 
 const infoAtletas = data.athletes.slice(0,10); // aquí estoy guardando la información del arreglo que esta en athletes.js
+const buscarNombrePersona=document.getElementById("busqueda");//asigno a var buscarNombreAtleta el input que se encuentra en html por medio del id"busqueda"
+const seleccionarSexoAtleta=document.getElementById("sexo-filtrar"); //se coloca eñ id del select en html
+const seleccionarDisciplina=document.getElementById("disciplinas-filtrar");
+buscarNombrePersona.addEventListener("keyup",buscarPorNombre);
+seleccionarSexoAtleta.addEventListener("change",mostrarResultadosFiltrarSexo); //depuesde crear la funcion afredo el nombre de ella despues del change
+seleccionarDisciplina.addEventListener("change",mostrarResultadosFiltrarDisciplina);
 
 function imprimirData (data){
   document.getElementById("contenedor-tarjetas").innerHTML=data.map((item)=>
@@ -37,45 +43,6 @@ function imprimirData (data){
 imprimirData(infoAtletas);
 
 
-//aqui se deben agregar las demas importaciones
-
-// import athletes from './data/athletes/athletes.js';
-
-// import data from './data/athletes/athletes.js';// importo toda la bbdd desde atletas.js, que ya fue exportada desde el .json a js
-
-//Declaracion de variables
-// const infoAtletas = data.athletes.slice(0,10);//esta var me muestra todos los datos de los atletas//Guardo los resultados de la data del js en una variable
-const buscarNombrePersona=document.getElementById("busqueda");//asigno a var buscarNombreAtleta el input que se encuentra en html por medio del id"busqueda"
-const seleccionarSexoAtleta=document.getElementById("sexo-filtrar"); //se coloca eñ id del select en html
-//console.log(buscarNombre, data);
-
-//Escucha de las acciones
-buscarNombrePersona.addEventListener("keyup",buscarPorNombre);
-seleccionarSexoAtleta.addEventListener("change",mostrarResultadosFiltrarSexo); //depuesde crear la funcion afredo el nombre de ella despues del change
-
-// // <!-- ** tarjetas  -->
-// //me traigo las datos de la bbdd y creo desde atletasMain.js items en el HTML para visualizarlos. 
-// function printCards(data) {
-//     document.getElementById("cards-container").innerHTML = data.map((item) =>
-//       ` <section class="box"> 
-//           <h3 class="nombre"> ${item.name}</h3>
-//             <div class="card-info"> 
-//             <p><strong>Sexo: </strong>${item.gender}</p>
-//             <p><strong>altura: </strong>${item.height}</p>
-//             <p><strong>peso: </strong>${item.weight}</p>
-//             <p><strong>disciplina: </strong>${item.sport}</p>
-//             <p><strong>grupo: </strong>${item.team}</p>
-//             <p><strong>pais: </strong>${item.noc}</p>
-//             <p><strong>edad: </strong>${item.age}</p>
-//             <p><strong>especialidad: </strong>${item.event}</p>
-//             <p><strong>medalla(s): </strong>${item.medal}.</p>  
-//           </div>
-//         </section>
-//       ` ).join('');
-//   }
-//   printCards(infoAtletas);
-// //*************************** */
-
 // FUNCION BUSCAR NOMBRE DEL ATLETA EN BUSCADOR
 function buscarPorNombre(event){
   const nombrePersona=buscarNombre(infoAtletas, event.target.value);
@@ -96,31 +63,9 @@ function mostrarResultadosFiltrarSexo() {
 //
 
 // ORIGINAL
-function llenadoOpciones(options_list) {
+function llenadoOpcionesDisciplina(options_list) {
   const options = options_list; 
   const modelList = document.getElementById("disciplinas-filtrar"); 
-  //   const arraySports = []
-  //   for (let index = 0; index < options.athletes.length; index++) {
-  //     if(!arraySports.includes( options.athletes[index].sport))
-  //   arraySports.push( options.athletes[index].sport)
-    
-  //   }
-  //   console.log(arraySports);
-
-
-  //   for (let i in arraySports) {
-  //   // for (let i in unico) { 
-  // //console.log(options_list);
-  //     // creamos un elemento de tipo option
-  //     let opt = document.createElement("option");
-  //     // le damos un valor
-  //     opt.value = arraySports[i];
-  //     // le ponemos un texto
-  //     opt.textContent = arraySports[i];
-
-  //     // lo agregamos al select
-  //     modelList.options.add(opt);
-  //   }
   const arraySports = []
   for (let index = 0; index < options.athletes.length; index++) {
     if(!arraySports.includes( options.athletes[index].sport)){
@@ -138,8 +83,36 @@ function llenadoOpciones(options_list) {
     console.log(arraySports);
   }
 }
-llenadoOpciones(athletes);
+llenadoOpcionesDisciplina(athletes);
 
+function mostrarResultadosFiltrarDisciplina(event){
+  const valorSeleccionadoDisciplina=seleccionarDisciplina.value;
+  const seleccionDisciplina= filtrarDisciplina(infoAtletas,valorSeleccionadoDisciplina);
+  imprimirData(seleccionDisciplina);
+}
+//   const arraySports = []
+//   for (let index = 0; index < options.athletes.length; index++) {
+//     if(!arraySports.includes( options.athletes[index].sport))
+//   arraySports.push( options.athletes[index].sport)
+    
+//   }
+//   console.log(arraySports);
+
+
+//   for (let i in arraySports) {
+//   // for (let i in unico) { 
+// //console.log(options_list);
+//     // creamos un elemento de tipo option
+//     let opt = document.createElement("option");
+//     // le damos un valor
+//     opt.value = arraySports[i];
+//     // le ponemos un texto
+//     opt.textContent = arraySports[i];
+
+//     // lo agregamos al select
+//     modelList.options.add(opt);
+//   }
+  
 
 //PRUEBA2
 // function llenadoOpciones(lista_opciones) {

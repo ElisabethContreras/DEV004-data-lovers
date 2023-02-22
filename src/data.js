@@ -7,7 +7,19 @@ export const buscarNombre = (infoAtletas, name) => {
   console.log(nombreBuscado);
   // return 'nombreBuscado';
 };
+// Filtrar por Sexo //La var filtrarSexo se debe llevar al main.js y agregar en el import
+export const filtrarSexo = (infoAtletas, gender) => {
+  const resultadoSexo = infoAtletas.filter((atleta) => atleta.gender.toLowerCase() === gender.toLowerCase());
+  return resultadoSexo;
+};
+// Filtrar por Disciplina //La var filtrarDisciplina se debe llevar al main.js y agregar en el import
+export const filtrarDisciplina = (infoAtletas, sport) => {
+  const resultadoDisciplina = infoAtletas.filter((atleta) => atleta.sport.toLowerCase() === sport.toLowerCase());
+  return resultadoDisciplina;
+};
+
 // export const athetesPais = (infoAthetas, noc) => {
 //   const namePais=infoAthetas.filter()
 //   return 'example';
 // };
+

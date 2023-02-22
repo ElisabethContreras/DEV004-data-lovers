@@ -17,40 +17,88 @@
         <img class="imagen-mascotas" src="Imagenes/logo web/logo.png" width="150" height="100" alt="" >
       </section>
       
-      <section id="menu">
-        <nav class="nav-menu">
-          <button class="initial-button" onclick="window.location.href='./index.html'">Volver al Inicio.</button>
+      <section id="menu-btn-volver">
+        <nav class="nav-menu-volver">
+          <button class="btn-inicial" onclick="window.location.href='./index.html'">Volver al Inicio.</button> 
         </nav>
       </section>
     </header>
     <!-- ********************** -->
 
+    <form class="menu-filtrado" id="menu">
+    <section class="seccion-buscar">
+      <!-- input o boton buscar??  -->  <!--autofocus al final del input, permite que el cursor se posicione automaticamente en el campo-->
+      <input class="buscar" type="search" id="busqueda" placeholder="&#128270;        Ingresa nombre a buscar..."  >
+    </section>
+         <!-- ** Filtrar Sexo  -->
+         <!-- ** PASO 1 CREAR EL SELECT CON LAS OPCIONES A VISUALIZAR en HTML  -->
+         <!-- ** PASO 2 CREAR en data.js la exportacion con sus variables -->
+         <!-- ** PASO 3.0 AGREGAR en main.js (incluye todos loas pasos 3.XX) en el campo *import { buscarNombre } from './data.js'* filtrar sexo ( { buscarNombre, filtrar sexo } ) -->
+         <!-- ** PASO 3.1 AGREGAR la variable en la seccion Declaracon de variables  -->
+         <!-- ** PASO 3.2 AGREGAR el listener en seccion Escucha de las acciones  -->
+         <!-- ** PASO 3.3 CREAR la funcion de mostrar los resultados del filtro filtrar sexo -->
 
-    <form class="menu-filtrado" id="menu"></form>
-    
-    <!-- input o boton buscar??  -->
-    <input class="buscar" type="search" id="busqueda" placeholder="Ingresa nombre a buscar...">
+   
+   <!-- ** Filtrar Genero/Sexo -->
+   <section class="seccion-filtrar-sexo filtroUno">
+        <p class="etiqueta texto">Genero</p>
+         <select class="filtrarSexo dos" name="filtrar" id="sexo-filtrar">
+          <option class="sexo" id="sexo" selected disabled hidden >---</option><!-- al colocar *selected disabled hidden* hago que se vea el nombre sexo, pero que no sea cliqueable para la busqueda, hidden=no visible/esconder   -->
+          <option value="F" >Femenino</option>
+          <option value="M" >Masculino</option>
+          <option value="otros">Mostrar todos</option>
 
+        </select>
+   </section>
+
+      <!-- ** Filtrar Disciplina  -->
+      <section class="seccion-filtrar-disciplina filtroUno">
+        <p class="etiqueta texto">Disciplina</p>
+        <select class="filtrarDisciplina dos" name="filtrar" id="disciplinas-filtrar">
+          <option id="disciplina">---</option>
+        </select>
+      </section>
+       
+      <!-- ** Filtrar Pais  -->
+      <section class="seccion-filtrar-pais filtroUno">
+        <p class="etiqueta texto">Pais</p>
+        <select class="filtrarPais dos" name="filtrar" id="pais-filtrar">
+          <option id="pais">Pais</option>
+        </select>
+      </section>
+
+      <!-- ** Filtrar Especialidad  -->
+      <section class="seccion-filtrar-especialidad filtroUno">
+        <p class="etiqueta texto">Especialidad</p>
+        <select class="filtrarEspecialidad dos" name="filtrar" id="despecialidad-filtrar">
+          <option id="especialidad">Especialidad</option>
+        </select>
+      </section>
+
+     <!-- ** Filtrar Medalla  -->
+    <section class="seccion-filtrar-medalla filtroUno">
+      <p class="etiqueta texto">Medalla</p>
+      <select class="filtrarMedalla dos" name="filtrar" id="medalla-filtrar">
+        <option id="medalla" selected disabled hidden>---</option>
+        <option value="oro">Oro</option>
+        <option value="plata">Plata</option>
+        <option value="bronce">Bronce</option>
+        <option value="todos">Todos</option>
+      </select>
+    </section>
+
+  </form>
 
 
 
     <main>
+      <!-- ** tarjetas  -->
+    <section>
+      <div class="contenedor-tarjetas" id="contenedor-tarjetas"></div>
+    </section>
+  </main>
 
-
-    </main>
- <section>
-  <div class="contenedor-tarjetas" id="contenedor-tarjetas">
-  </div>
- </section>
-
- <!--<div class="imagenmedalla">
-    <img src="Imagenes/medallas/orofrente.png" alt="Medalla por el frente">
-    <img src="Imagenes/medallas/oroatras.png" alt="Medalla por detrás">
-    <img src="Imagenes/medallas/platafrente.png" alt="Medalla por el frente">
-    <img src="Imagenes/medallas/plataatras.png" alt="Medalla por detrás"><img src="Imagenes/medallas/orofrente.png" alt="Medalla por el frente">
-    <img src="Imagenes/medallas/broncefrente.png" alt="Medalla por detrás">
-    <img src="Imagenes/medallas/bronceatras.png" alt="Medalla por detrás">
-  </div> -->
+    
     
 
 
@@ -58,6 +106,6 @@
     <!-- <script type="text/javascript" src="/data/athletes/athletes.js"></script> -->
     
   
-    <script src="main.js" type="module"></script> <!-- llamo al main donde se encuentra Importar BBDD -->
+    <script src="Main.js" type="module"></script> <!-- llamo al main donde se encuentra Importar BBDD -->
   </body>
 </html>
