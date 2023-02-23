@@ -1,9 +1,9 @@
-import { example, anotherExample } from '../src/data.js';
+import {imprimirData,} from '../src/atletasMain.js';
 
 
-describe('example', () => {
+describe(imprimirData, () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof imprimirData).toBe('function');
   });
 
   it('returns `example`', () => {

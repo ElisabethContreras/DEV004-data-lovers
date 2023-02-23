@@ -7,7 +7,7 @@ import athletes from './data/athletes/athletes.js';
 import data from './data/athletes/athletes.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(buscarNombre, data);
+//console.log(buscarNombre, data);
 
 const infoAtletas = data.athletes.slice(0,10); // aquí estoy guardando la información del arreglo que esta en athletes.js
 const buscarNombrePersona=document.getElementById("busqueda");//asigno a var buscarNombreAtleta el input que se encuentra en html por medio del id"busqueda"
@@ -38,7 +38,7 @@ function imprimirData (data){
                 </figcaption>
             </figure>
     </section>
-    `).join("");// se creó un subtitulo "nombre", extrayendo del athletes.js
+    `).join('');// se creó un subtitulo "nombre", extrayendo del athletes.js
 }
 imprimirData(infoAtletas);
 

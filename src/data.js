@@ -4,8 +4,8 @@
 //includes() : devuelve true/false si el dato buscado esta en el array
 export const buscarNombre = (infoAtletas, name) => {
   const nombreBuscado=infoAtletas.filter((atleta)=>atleta.name.toLowerCase().includes(name.toLowerCase()));
-  console.log(nombreBuscado);
-  // return 'nombreBuscado';
+  // console.log(nombreBuscado);
+  return nombreBuscado;
 };
 // Filtrar por Sexo //La var filtrarSexo se debe llevar al main.js y agregar en el import
 export const filtrarSexo = (infoAtletas, gender) => {
