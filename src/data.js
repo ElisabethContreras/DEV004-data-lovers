@@ -38,6 +38,25 @@ export const filtrarPais = (infoAtletas, noc) => {
   return resultadoPais;
 };
 
+export const ordenAlfabetico = (infoAtletas, orden) => {
+  const copyPersonsInfo = [...infoAtletas];
+ 
+  if (orden === "AZ") {
+    return copyPersonsInfo.sort((a, z) => a.name.toLowerCase() > z.name.toLowerCase() ? 1 : -1)
+  } else {
+    return copyPersonsInfo.sort((a, z) => a.name.toLowerCase() < z.name.toLowerCase() ? 1 : -1)
+  }
+};
+
+export const calculatePercentage = (personsInfo, selectedFilter) => {
+  const resultPercentage = parseFloat((selectedFilter.length * 100) / personsInfo.length).toFixed(2);
+  return resultPercentage;
+};
+
+
+
+
+
 // export const athetesPais = (infoAthetas, noc) => {
 //   const namePais=infoAthetas.filter()
 //   return 'example';
