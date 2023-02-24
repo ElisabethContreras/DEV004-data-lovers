@@ -7,15 +7,35 @@ export const buscarNombre = (infoAtletas, name) => {
   // console.log(nombreBuscado);
   return nombreBuscado;
 };
+
 // Filtrar por Sexo //La var filtrarSexo se debe llevar al main.js y agregar en el import
 export const filtrarSexo = (infoAtletas, gender) => {
   const resultadoSexo = infoAtletas.filter((atleta) => atleta.gender.toLowerCase() === gender.toLowerCase());
   return resultadoSexo;
 };
+
 // Filtrar por Disciplina //La var filtrarDisciplina se debe llevar al main.js y agregar en el import
 export const filtrarDisciplina = (infoAtletas, sport) => {
   const resultadoDisciplina = infoAtletas.filter((atleta) => atleta.sport.toLowerCase() === sport.toLowerCase());
   return resultadoDisciplina;
+};
+
+// Filtrar por Especialidad //La var filtrarEspecialidad se debe llevar al main.js y agregar en el import
+export const filtrarEspecialidad = (infoAtletas, event) => {
+  const resultadoEspecialidad = infoAtletas.filter((atleta) => atleta.event.toLowerCase() === event.toLowerCase());
+  return resultadoEspecialidad;
+};
+
+// Filtrar por Medalla //La var filtrarMedalla se debe llevar al main.js y agregar en el import
+export const filtrarMedalla = (infoAtletas, medal) => {
+  const resultadoMedalla = infoAtletas.filter((atleta) => atleta.medal.toLowerCase() === medal.toLowerCase());
+  return resultadoMedalla;
+};
+
+// Filtrar por Pais //La var filtrarPais se debe llevar al main.js y agregar en el import
+export const filtrarPais = (infoAtletas, noc) => {
+  const resultadoPais = infoAtletas.filter((atleta) => atleta.noc.toLowerCase() === noc.toLowerCase());
+  return resultadoPais;
 };
 
 // export const athetesPais = (infoAthetas, noc) => {

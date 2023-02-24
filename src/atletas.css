@@ -64,11 +64,10 @@ body {
     box-shadow: 0px 2px 10px 2px;
 }
 .tamaño-parrafo{
-  font-size:70%;
+  font-size:85%;
  line-height: 17px; /*interlineado*/
 }
 .tamaño-texto{
-  font-size:14px;
   font-weight: bold;
 }
   figure .frontal,

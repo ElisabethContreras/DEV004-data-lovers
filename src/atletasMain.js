@@ -27,11 +27,12 @@ seleccionarMedalla.addEventListener("change",mostrarResultadosFiltrarMedalla);
 seleccionarPais.addEventListener("change",mostrarResultadosFiltrarPais);
 
 
+
 // <!-- ** tarjetas  -->
 //me traigo las datos de la bbdd y creo desde atletasMain.js items en el HTML para visualizarlos. 
 function printCards(data) {
-  document.getElementById("cards-container").innerHTML = data.map((item) =>
-  `<section class="caja">
+  document.getElementById("contenedor-tarjetas").innerHTML = data.map((item) =>
+    `<section class="caja">
   <figure>
      <h2 class="nombre">${item.name}</h2>
      <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
@@ -55,57 +56,10 @@ function printCards(data) {
 }
 printCards(infoAtletas);
 
-// function imprimirData (data){
-//   document.getElementById("contenedor-tarjetas").innerHTML=data.map((item)=>
-//     `<section class="caja">
-//            <figure>
-//               <h2 class="nombre">${item.name}</h2>
-//               <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
-//                  <figcaption class="trasera">
-//                     <div class="infotarjetas">
-//                         <p class="tamaño-parrafo" ><strong class="tamaño-texto"> Sexo: </strong> ${item.gender} </p>
-//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Altura: </strong> ${item.height} </p>
-//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Peso: </strong> ${item.weight} </p>
-//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Disciplina: </strong> ${item.sport} </p>
-//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Equipo: </strong> ${item.team} </p>
-//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> País: </strong> ${item.noc} </p>
-//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Edad: </strong> ${item.age} </p>
-//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Especialidad: </strong> ${item.event} </p>
-//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Medalla: </strong> ${item.medal} </p>
-//                     </div>
-//                 </figcaption>
-//             </figure>
-       
-//     </section>
-//     `).join("");// se creó un subtitulo "nombre", extrayendo del athletes.js
-// }
-// imprimirData(infoAtletas);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//*************************** */
-
 // FUNCION BUSCAR NOMBRE DEL ATLETA EN BUSCADOR
 function buscarPorNombre(event){
   const nombrePersona=buscarNombre(infoAtletas, event.target.value);
-  imprimirData(nombrePersona);
+  printCards(nombrePersona);
 }
 
 // FUNCION FILTRAR SEXO ATLETA EN BOX BUSCADOR
@@ -113,45 +67,24 @@ function mostrarResultadosFiltrarSexo() {
   if (this.value === "F" || this.value === "M") {
     const valorSeleccionadoSexo = seleccionarSexoAtleta.value;//aqui se coloca el nombre dela const filtarSexoAtleta
     const seleccionSexo = filtrarSexo(infoAtletas, valorSeleccionadoSexo); // despues de asignar la variable,se debe asignar de impor filtrarSexo y pasar los valores de infoAtletas y valorSeleccionadoSexo
-    imprimirData(seleccionSexo);
+    printCards(seleccionSexo);
   }
   else {
-    imprimirData(infoAtletas);
+    printCards(infoAtletas);
   }
 }
 
 // FUNCION FILTRAR DISCIPLINA Y LLENADO DEL FILTRO DINAMICAMENTE
 // ORIGINAL LLENADO DINAMICO DEL FILTRO(html) BOX
 function llenadoOpciones(options_list) {
-  let options = options_list;
-  let modelList = document.getElementById("disciplinas-filtrar");
-  //   const arraySports = []
-  //   for (let index = 0; index < options.athletes.length; index++) {
-  //     if(!arraySports.includes( options.athletes[index].sport))
-  //   arraySports.push( options.athletes[index].sport)
-
-  //   }
-  //   console.log(arraySports);
-
-
-  //   for (let i in arraySports) {
-  //   // for (let i in unico) { 
-  // //console.log(options_list);
-  //     // creamos un elemento de tipo option
-  //     let opt = document.createElement("option");
-  //     // le damos un valor
-  //     opt.value = arraySports[i];
-  //     // le ponemos un texto
-  //     opt.textContent = arraySports[i];
-
-  //     // lo agregamos al select
-  //     modelList.options.add(opt);
-  //   }
+  const options = options_list;
+  const modelList = document.getElementById("disciplinas-filtrar");
+ 
   const arraySports = []
   for (let index = 0; index < options.athletes.length; index++) {
     if (!arraySports.includes(options.athletes[index].sport)) {
       arraySports.push(options.athletes[index].sport)
-      let opt = document.createElement("option");
+      const opt = document.createElement("option");
       // le damos un valor
       opt.value = options.athletes[index].sport;
       // le ponemos un texto
@@ -161,20 +94,143 @@ function llenadoOpciones(options_list) {
       modelList.options.add(opt);
 
     }
-   // console.log(arraySports);
+    // console.log(arraySports);
   }
 }
+//   const arraySports = []
+//   for (let index = 0; index < options.athletes.length; index++) {
+//     if(!arraySports.includes( options.athletes[index].sport))
+//   arraySports.push( options.athletes[index].sport)
+
+//   }
+//   console.log(arraySports);
+
+
+//   for (let i in arraySports) {
+//   // for (let i in unico) { 
+// //console.log(options_list);
+//     // creamos un elemento de tipo option
+//     let opt = document.createElement("option");
+//     // le damos un valor
+//     opt.value = arraySports[i];
+//     // le ponemos un texto
+//     opt.textContent = arraySports[i];
+
+//     // lo agregamos al select
+//     modelList.options.add(opt);
+//   }
 llenadoOpciones(athletes);
 
-function mostrarResultadosFiltrarDisciplina(event){
+function mostrarResultadosFiltrarDisciplina(){
   const valorSeleccionadoDisciplina=seleccionarDisciplina.value;
   const seleccionDisciplina=filtrarDisciplina(infoAtletas,valorSeleccionadoDisciplina);
   printCards(seleccionDisciplina);
 }
+// FUNCION FILTRAR ESPECIALIDAD Y LLENADO DEL FILTRO DINAMICAMENTE
+// ORIGINAL LLENADO DINAMICO DEL FILTRO ESPECIALIDAD(html) BOX
+// mostrarResultadosFiltrarEspecialidad
+function llenadoOpcionesEspecialidad(options_list) {
+  const options = options_list;
+  const modelList = document.getElementById("especialidad-filtrar");
+  const arrayEvent = [] //arrayEvent significa que es un arreglo de la especialidad (event es especiliadad en ingles y asi esta en el json athetes)
+  for (let index = 0; index < options.athletes.length; index++) {
+    if (!arrayEvent.includes(options.athletes[index].event)) {
+      arrayEvent.push(options.athletes[index].event)
+      const opt = document.createElement("option");
+      // le damos un valor
+      opt.value = options.athletes[index].event;
+      // le ponemos un texto
+      opt.textContent = options.athletes[index].event;
+
+      // lo agregamos al select
+      modelList.options.add(opt);
+
+    }
+    // console.log(arraySports);
+  }
+}
+llenadoOpcionesEspecialidad(athletes);
+
+function mostrarResultadosFiltrarEspecialidad(){
+  const valorSeleccionadoEspecialidad=seleccionarEspecialidad.value;
+  const seleccionEspecialidad=filtrarEspecialidad(infoAtletas,valorSeleccionadoEspecialidad);
+  printCards(seleccionEspecialidad);
+}
+
+// FUNCION FILTRAR MEDALLA
+function mostrarResultadosFiltrarMedalla() {
+  const valorSeleccionadoMedalla=seleccionarMedalla.value;
+  const seleccionMedalla=filtrarMedalla(infoAtletas,valorSeleccionadoMedalla);
+  printCards(seleccionMedalla);
+}
+
+mostrarResultadosFiltrarPais
+function llenadoOpcionesPais(options_list) {
+  const options = options_list;
+  const modelList = document.getElementById("pais-filtrar");
+  const arrayPais = [];
+
+  for (let index = 0; index < options.athletes.length; index++) {
+    if (!arrayPais.includes(options.athletes[index].noc)) {
+      arrayPais.push(options.athletes[index].noc);
+    }
+  }
+
+  // Ordenar el array alfabéticamente
+  arrayPais.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+  // Recorrer el array ordenado y agregar cada opción al select
+  for (let i = 0; i < arrayPais.length; i++) {
+    const opt = document.createElement("option");
+    opt.value = arrayPais[i];
+    opt.textContent = arrayPais[i];
+    modelList.options.add(opt);
+  }}
+llenadoOpcionesPais(athletes);
 
 
+function mostrarResultadosFiltrarPais(){
+  const valorSeleccionadoPais=seleccionarPais.value;
+  const seleccionPais=filtrarPais(infoAtletas,valorSeleccionadoPais);
+  printCards(seleccionPais);
+}
+// FUNCION FILTRAR ESPECIALIDAD Y LLENADO DEL FILTRO DINAMICAMENTE
+// ORIGINAL LLENADO DINAMICO DEL FILTRO ESPECIALIDAD(html) BOX
+// mostrarResultadosFiltrarEspecialidad
+// function llenadoOpcionesPais(options_list) {
+//   let options = options_list;
+//   let modelList = document.getElementById("pais-filtrar");
+//   const arrayPais = [] //arrayEvent significa que es un arreglo de la especialidad (event es especiliadad en ingles y asi esta en el json athetes)
 
+//   for (let index = 0; index < options.athletes.length; index++) {
+//     if (!arrayPais.includes(options.athletes[index].noc)) {
+//       arrayPais.push(options.athletes[index].noc);
+//       // arrayPais.sort();
+//     // console.log("arreglo = "+arrayPais);
+//       let opt = document.createElement("option");
+//       // le damos un valor
+//       opt.value = options.athletes[index].noc;
+//       // le ponemos un texto
+//       opt.textContent = options.athletes[index].noc;
 
+//       // lo agregamos al select
+//       modelList.options.add(opt);
+//     }
+//     }
+//    // console.log(arraySports);
+// }
+
+//  // Ordenar el array de país alfabéticamente
+//  arrayPais.sort();
+
+//  // Agregar opciones ordenadas al select
+//  for (let i = 0; i < arrayPais.length; i++) {
+//    let opt = document.createElement("option");
+//    opt.value = arrayPais[i];
+//    opt.textContent = arrayPais[i];
+//    // console.log(arrayPais); //al revisar se enuentra ordenado el arreglo
+//    modelList.appendChild(opt);
+//  }
 
 
 
