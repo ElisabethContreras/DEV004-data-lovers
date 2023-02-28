@@ -1,4 +1,4 @@
-import { buscarNombre, filtrarSexo} from '../src/data.js'; // de donde se estan importando los datos
+import { buscarNombre, filtrarSexo, filtrarDisciplina} from '../src/data.js'; // de donde se estan importando los datos
 import data from '../src/data/athletes/athletes.js';
 
 const infoAtletas = data.athletes.slice(0,10); 
@@ -82,3 +82,22 @@ console.log(seaMujer);
     console.log(seaHombre);
    });
 });
+describe('filtrarDisciplina',() => {
+  it('Debería ser una función', () => {
+    expect(typeof filtrarDisciplina).toBe('function');
+  });
+  it('Retorna lista de atletas que participaron en la disciplina seleccionada', () => {
+    const opcionDisciplina =filtrarDisciplina(infoAtletas, "Rowing Men's Coxless Pairs") // Act
+    expect(infoAtletas).toEqual(
+      expect.arrayContaining(opcionDisciplina),
+      );
+      //console.log(opcionDisciplina);
+    // expect(example()).toBe('example');
+  });
+  it.only('Retorna todas las disciplinas al seleccionar la opción "limpiar filtro"', () => {
+    const todasLasDisciplinas = filtrarDisciplina(infoAtletas, "limpiar filtro");
+    expect(infoAtletas).toEqual(expect.arrayContaining(todasLasDisciplinas),
+    );
+    console.log(todasLasDisciplinas);
+   });
+  });
