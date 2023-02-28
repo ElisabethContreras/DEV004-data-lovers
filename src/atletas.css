@@ -344,7 +344,20 @@ figure .trasera{
   }
   /*pantalla de  670 a 1600 pixeles.*/
   @media screen and (min-width: 670px) and (max-width: 1600px){
+    .texto{
+      color: #2BF14B;
+    }
   }
     /*pantalla de 200 a 669 pixeles*/
+    /*empezar con teléfonos y despues con las pantallas pc.*/
   @media screen and (min-width: 200px) and (max-width: 669px) {
+    .texto{
+      color: rebeccapurple;
+    }
+    .caja{
+      width: 33%;
+    }
+    .nombre{
+      width: 33%;
+    }
   }

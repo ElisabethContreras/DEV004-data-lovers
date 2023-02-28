@@ -159,6 +159,7 @@ function mostrarResultadosFiltrarDisciplina() {
     const seleccionDisciplina = filtrarDisciplina(infoAtletas, valorSeleccionadoDisciplina);
     printCards(seleccionDisciplina);
     mostrarPorcentaje(infoAtletas, seleccionDisciplina);
+    //Se reacomodan si estan todas las opciones siguientes a cero. Es decir que, al tomar disciplina, als demás vuelven a cero
     seleccionarSexoAtleta.options[(seleccionarSexoAtleta.selectedIndex=[0])];
     // seleccionarDisciplina.options[(seleccionarDisciplina.selectedIndex=[0])];
     seleccionarEspecialidad.options[(seleccionarEspecialidad.selectedIndex=[0])];
