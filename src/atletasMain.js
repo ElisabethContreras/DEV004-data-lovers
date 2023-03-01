@@ -6,7 +6,7 @@ import athletes from './data/athletes/athletes.js';
 import data from './data/athletes/athletes.js';// importo toda la bbdd desde atletas.js, que ya fue exportada desde el .json a js
 
 //Declaracion de variables
-const infoAtletas = data.athletes.slice(0,10);//esta var me muestra todos los datos de los atletas//Guardo los resultados de la data del js en una variable
+const infoAtletas = data.athletes //.slice(0,10);//esta var me muestra todos los datos de los atletas//Guardo los resultados de la data del js en una variable
 const buscarNombrePersona = document.getElementById("busqueda");//asigno a var buscarNombreAtleta el input que se encuentra en html por medio del id"busqueda"
 const seleccionarSexoAtleta = document.getElementById("sexo-filtrar"); //se coloca el id del select en html
 const seleccionarDisciplina = document.getElementById("disciplinas-filtrar");//se coloca el id del select en html

@@ -1,8 +1,7 @@
-import { buscarNombre, filtrarSexo, filtrarDisciplina} from '../src/data.js'; // de donde se estan importando los datos
+import { buscarNombre, filtrarSexo, filtrarDisciplina, filtrarEspecialidad, filtrarMedalla,} from '../src/data.js'; // de donde se estan importando los datos
 import data from '../src/data/athletes/athletes.js';
 
 const infoAtletas = data.athletes.slice(0,10); 
-// const filtroBusqueda = infoAtletas.filter(((atleta)=>atleta.name.toLowerCase().includes(nombre.toLowerCase())));
 const giovanni = [{
   name: 'Giovanni Abagnale',
       gender: 'M',
@@ -37,12 +36,11 @@ describe('buscarNombre',() => {
   it('Retorna array vacio cuando no existe un atleta con el nombre indicado', () => {
     const resultadoObtenido =buscarNombre(infoAtletas, "Maria") // Act
     expect(resultadoObtenido).toStrictEqual([]) // Assert
-    // expect(example()).toBe('example');
+   
   });
 
   it('Retorna array con información del atleta si se busca el nombre Giovanni', () => {
-    // const infoAtletas = data.athletes.slice(0,10); // Arrange
-    const resultadoObtenido =buscarNombre(infoAtletas, "Giovanni") // Act
+       const resultadoObtenido =buscarNombre(infoAtletas, "Giovanni") // Act
        console.log(buscarNombre(infoAtletas, "Giovanni"));
 /*
     expect(resultadoObtenido[0]).toContain({
@@ -66,15 +64,15 @@ describe('filtrarSexo', () => {
   it('Debería ser una función', () => {
     expect(typeof filtrarSexo).toBe('function');
   });
-  it('Retorna ´F´ para Femenino', () => {
+  it('Retorna "F" para Femenino', () => {
 const seaMujer = filtrarSexo(infoAtletas, "F")
 expect(seaMujer).toEqual(
   expect.not.arrayContaining(giovanni),
 );
 console.log(seaMujer);
-    //expect(seaMujer).toBeTruthy(seaMujer);
+    
   });
-  it('Retorna ´M´ para Masculino', () => {
+  it('Retorna "M" para Masculino', () => {
     const seaHombre = filtrarSexo(infoAtletas, "M")
     expect(seaHombre).toEqual(
       expect.not.arrayContaining(patimat),
@@ -87,17 +85,55 @@ describe('filtrarDisciplina',() => {
     expect(typeof filtrarDisciplina).toBe('function');
   });
   it('Retorna lista de atletas que participaron en la disciplina seleccionada', () => {
-    const opcionDisciplina =filtrarDisciplina(infoAtletas, "Rowing Men's Coxless Pairs") // Act
+    const opcionDisciplina =filtrarDisciplina(infoAtletas, "Rowing") // Act
     expect(infoAtletas).toEqual(
       expect.arrayContaining(opcionDisciplina),
       );
-      //console.log(opcionDisciplina);
-    // expect(example()).toBe('example');
+      console.log(opcionDisciplina);
+    
   });
-  it.only('Retorna todas las disciplinas al seleccionar la opción "limpiar filtro"', () => {
+  it('Retorna todas las disciplinas al seleccionar la opción "limpiar filtro"', () => {
     const todasLasDisciplinas = filtrarDisciplina(infoAtletas, "limpiar filtro");
     expect(infoAtletas).toEqual(expect.arrayContaining(todasLasDisciplinas),
     );
     console.log(todasLasDisciplinas);
    });
   });
+  describe('filtrarEspecialidad',() => {
+    it('Debería ser una función', () => {
+      expect(typeof filtrarEspecialidad).toBe('function');
+    });
+    it('Retorna lista de atletas que participaron en la especialidad seleccionada', () => {
+      const opcionEspecialidad =filtrarEspecialidad(infoAtletas, "Taekwondo Women's Flyweight") // Act
+      expect(infoAtletas).toEqual(
+        expect.arrayContaining(opcionEspecialidad),
+        );
+      console.log(opcionEspecialidad);
+      
+    });
+    it('Retorna todas las especialidades al seleccionar la opción "limpiar filtro"', () => {
+      const todasLasEspecialidades = filtrarEspecialidad(infoAtletas, "limpiar filtro");
+      expect(infoAtletas).toEqual(expect.arrayContaining(todasLasEspecialidades),
+      );
+      console.log(todasLasEspecialidades);
+     });
+    });
+    describe('filtrarMedalla',() => {
+      it('Debería ser una función', () => {
+        expect(typeof filtrarMedalla).toBe('function');
+      });
+      it('Retorna lista de atletas que participaron ganaron medallas de oro', () => {
+        const opcionMedalla =filtrarMedalla(infoAtletas, "gold") // Act
+        expect(infoAtletas).toEqual(expect.arrayContaining( opcionMedalla),
+        );
+        console.log(opcionMedalla);
+        
+      });
+      it('Retorna todas las disciplinas al seleccionar la opción "limpiar filtro"', () => {
+        const todasLasMedallas = filtrarMedalla(infoAtletas, "limpiar filtro");
+        expect(infoAtletas).toEqual(expect.arrayContaining(todasLasMedallas),
+        );
+        console.log(todasLasMedallas);
+       });
+      });
+      
