@@ -123,8 +123,8 @@ function mostrarResultadosFiltrarSexo() {
 
 // 1.-FUNCION FILTRAR DISCIPLINA, LLENADO DINAMICAMENTE AL HTML (BOX), FILTRA QUE NO SE REPITAN LOS DATOS EN LA LISTA Y LAS ORDENA ALBABETICAMENTE
 function llenadoOpcionesDisciplinas(options_list) {
-  let options = options_list;
-  let modelList = document.getElementById("disciplinas-filtrar");
+  const options = options_list;
+  const modelList = document.getElementById("disciplinas-filtrar");
   const arraySports = []
 
   for (let index = 0; index < options.athletes.length; index++) {
@@ -138,7 +138,7 @@ function llenadoOpcionesDisciplinas(options_list) {
   // Recorrer el array ordenado y agregar cada opción al select
   for (let i = 0; i < arraySports.length; i++) {
 
-    let opt = document.createElement("option");
+    const opt = document.createElement("option");
     // le damos un valor
     opt.value = arraySports[i];
     // le ponemos un texto
@@ -171,8 +171,8 @@ function mostrarResultadosFiltrarDisciplina() {
 
 // 1.-FUNCION FILTRAR ESPECIALIDAD, LLENADO DINAMICAMENTE AL HTML (BOX), FILTRA QUE NO SE REPITAN LOS DATOS EN LA LISTA Y LAS ORDENA ALBABETICAMENTE
 function llenadoOpcionesEspecialidad(options_list) {
-  let options = options_list;
-  let modelList = document.getElementById("especialidad-filtrar");
+  const options = options_list;
+  const modelList = document.getElementById("especialidad-filtrar");
   const arrayEspecialidad = [] //arrayEspecialidad significa que es un arreglo de la especialidad (event es especiliadad en ingles y asi esta en el json athetes)
 
   for (let index = 0; index < options.athletes.length; index++) {
@@ -185,7 +185,7 @@ function llenadoOpcionesEspecialidad(options_list) {
 
   // Recorrer el array ordenado y agregar cada opción al select
   for (let i = 0; i < arrayEspecialidad.length; i++) {
-    let opt = document.createElement("option");
+    const opt = document.createElement("option");
     // le damos un valor
     opt.value = arrayEspecialidad[i];
     // le ponemos un texto
@@ -197,19 +197,19 @@ function llenadoOpcionesEspecialidad(options_list) {
 }
 llenadoOpcionesEspecialidad(athletes);
 
-function mostrarResultadosFiltrarEspecialidad(event) {
+function mostrarResultadosFiltrarEspecialidad() {
   if (this.value==="otros") {
     printCards(infoAtletas);
   }else{
     const valorSeleccionadoEspecialidad = seleccionarEspecialidad.value;
     const seleccionEspecialidad = filtrarEspecialidad(infoAtletas, valorSeleccionadoEspecialidad);
-  printCards(seleccionEspecialidad);
-  mostrarPorcentaje(infoAtletas, seleccionEspecialidad);
-  seleccionarSexoAtleta.options[(seleccionarSexoAtleta.selectedIndex=[0])];
-  seleccionarDisciplina.options[(seleccionarDisciplina.selectedIndex=[0])];
-  // seleccionarEspecialidad.options[(seleccionarEspecialidad.selectedIndex=[0])];
-  seleccionarMedalla.options[(seleccionarMedalla.selectedIndex=[0])];
-  seleccionarPais.options[(seleccionarPais.selectedIndex=[0])];
+    printCards(seleccionEspecialidad);
+    mostrarPorcentaje(infoAtletas, seleccionEspecialidad);
+    seleccionarSexoAtleta.options[(seleccionarSexoAtleta.selectedIndex=[0])];
+    seleccionarDisciplina.options[(seleccionarDisciplina.selectedIndex=[0])];
+    // seleccionarEspecialidad.options[(seleccionarEspecialidad.selectedIndex=[0])];
+    seleccionarMedalla.options[(seleccionarMedalla.selectedIndex=[0])];
+    seleccionarPais.options[(seleccionarPais.selectedIndex=[0])];
   }
   
 }
@@ -219,23 +219,23 @@ function mostrarResultadosFiltrarMedalla() {
   if (this.value==="otros") {
     printCards(infoAtletas);
   }else{
-     const valorSeleccionadoMedalla = seleccionarMedalla.value;
-     const seleccionMedalla = filtrarMedalla(infoAtletas, valorSeleccionadoMedalla);
-     printCards(seleccionMedalla);
-     mostrarPorcentaje(infoAtletas, seleccionMedalla);
-     seleccionarSexoAtleta.options[(seleccionarSexoAtleta.selectedIndex=[0])];
-     seleccionarDisciplina.options[(seleccionarDisciplina.selectedIndex=[0])];
-     seleccionarEspecialidad.options[(seleccionarEspecialidad.selectedIndex=[0])];
+    const valorSeleccionadoMedalla = seleccionarMedalla.value;
+    const seleccionMedalla = filtrarMedalla(infoAtletas, valorSeleccionadoMedalla);
+    printCards(seleccionMedalla);
+    mostrarPorcentaje(infoAtletas, seleccionMedalla);
+    seleccionarSexoAtleta.options[(seleccionarSexoAtleta.selectedIndex=[0])];
+    seleccionarDisciplina.options[(seleccionarDisciplina.selectedIndex=[0])];
+    seleccionarEspecialidad.options[(seleccionarEspecialidad.selectedIndex=[0])];
     //  seleccionarMedalla.options[(seleccionarMedalla.selectedIndex=[0])];
-     seleccionarPais.options[(seleccionarPais.selectedIndex=[0])];
+    seleccionarPais.options[(seleccionarPais.selectedIndex=[0])];
   }
  
 }
 
 // 1.-FUNCION FILTRAR PAIS, LLENADO DINAMICAMENTE AL HTML (BOX), FILTRA QUE NO SE REPITAN LOS DATOS EN LA LISTA Y LAS ORDENA ALBABETICAMENTE
 function llenadoOpcionesPais(options_list) {
-  let options = options_list;
-  let modelList = document.getElementById("pais-filtrar");
+  const options = options_list;
+  const modelList = document.getElementById("pais-filtrar");
   const arrayPais = [];
 
   for (let index = 0; index < options.athletes.length; index++) {
@@ -249,7 +249,7 @@ function llenadoOpcionesPais(options_list) {
 
   // Recorrer el array ordenado y agregar cada opción al select
   for (let i = 0; i < arrayPais.length; i++) {
-    let opt = document.createElement("option");
+    const opt = document.createElement("option");
     opt.value = arrayPais[i];
     opt.textContent = arrayPais[i];
     modelList.options.add(opt);
@@ -284,5 +284,5 @@ function mostrarPorcentaje(infoAtletas,seleccionar) {
   const resultadoP=calcularPorcentaje(infoAtletas, seleccionar);
   // resultadocalculo.innerHTML="Existen "+ seleccionar.length+" atletas en este filtro y representa "+resultadoP+"% de todos los participantes. "
   resultadocalculo.innerHTML="Participaron "+ seleccionar.length+" atletas  "+ " y representan el "+resultadoP+"% de todos los participantes. "
-  
+  console.log(seleccionar.length);
 }

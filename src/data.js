@@ -4,7 +4,7 @@
 //includes() : devuelve true/false si el dato buscado esta en el array
 export const buscarNombre = (infoAtletas, name) => { //name corresponde al nombre en la bbdd
   const nombreBuscado=infoAtletas.filter((atleta)=>atleta.name.toLowerCase().includes(name.toLowerCase()));
-// console.log(nombreBuscado); 
+  // console.log(nombreBuscado); 
   return nombreBuscado;
 };
 
@@ -51,6 +51,7 @@ export const ordenAlfabetico = (infoAtletas, orden) => {
 export const calcularPorcentaje = (infoAtletas, seleccionar) => {
   const resultadoPorcentaje = parseFloat((seleccionar.length * 100) / infoAtletas.length).toFixed(2); // parseFloat crea una cadena y devuelve un número como flotante. Es decir, un número decimal.
   return resultadoPorcentaje;// toFixed nos permite redondear número aproximados.
+ 
 };
 
 
