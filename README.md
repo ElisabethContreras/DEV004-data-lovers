@@ -52,9 +52,12 @@ Para entender lo que nuestros usuarios requieren o necesitan, nos basamos en 10 
 También se realizaron test para cada funcionalidad, desde la historia 2 en adelante.
 
 ## 1.1 Prototipos de baja y alta fidelidad
-[Prototipo baja fidelidad Home](/imagen_prototipo_1.png)
-[Prototipo de baja fidelidad data](/HU10.png)
-
+<!-- [Prototipo baja fidelidad Home](/imagen_prototipo_1.png)
+[Prototipo de baja fidelidad data](/HU10.png) -->
+<image 
+src="/imagen_prototipo_1.png" 
+alt="PBF Home"
+caption="Prototipo baja fidelidad Home">
 ## 3. Objetivos de aprendizaje
 ### HTML
 
