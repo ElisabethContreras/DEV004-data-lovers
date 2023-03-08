@@ -38,16 +38,16 @@ Se agregaron 5 botones de filtro, 1 barra de búsqueda y un botón para ordenar.
 Seguimos los conceptos entregados en el README para guiarnos en el proceso de desarrollo (visualizar la data,
 filtrarla, ordenarla y hacer un cálculo agregado).
 Para entender lo que nuestros usuarios requieren o necesitan, nos basamos en 10 historias de usuarios (HU). Estas son:
- ✔HU1: La HU1 esta hecha para informar al usuario sobre los JJOO 2016
- ✔HU2: Mostrar/listar la data.
- ✔HU3: Buscar por nombre del atleta.
- ✔HU4: Filtrar por género.
- ✔HU5: Filtrar por disciplina.
- ✔HU6: Filtrar por especialidad.
- ✔HU7: Filtrar por medalla.
- ✔HU8: Filtrar por país.
- ✔HU9: ordenar alfabéticamente (a-z y z-a).
- ✔HU10: Filtrar cálculo agregado.
+* ✔HU1: La HU1 esta hecha para informar al usuario sobre los JJOO 2016
+* ✔HU2: Mostrar/listar la data.
+* ✔HU3: Buscar por nombre del atleta.
+* ✔HU4: Filtrar por género.
+* ✔HU5: Filtrar por disciplina.
+* ✔HU6: Filtrar por especialidad.
+* ✔HU7: Filtrar por medalla.
+* ✔HU8: Filtrar por país.
+* ✔HU9: ordenar alfabéticamente (a-z y z-a).
+* ✔HU10: Filtrar cálculo agregado.
  
 También se realizaron test para cada funcionalidad, desde la historia 2 en adelante.
 
