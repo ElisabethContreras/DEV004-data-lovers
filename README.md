@@ -2,29 +2,11 @@
 
 ## Índice
 
-<!-- * [1. Preámbulo](#1-preámbulo) -->
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [1. Resumen del proyecto](#2-resumen-del-proyecto)
+* [2. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+
 
 ***
-
-<!-- ## 1. Preámbulo
-
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
-
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_. -->
 
 ## 1 Resumen del proyecto
 
@@ -58,7 +40,8 @@ También se realizaron test para cada funcionalidad, desde la historia 2 en adel
 src="/imagen_prototipo_1.png" 
 alt="PBF Home"
 caption="Prototipo baja fidelidad Home">
-## 3. Objetivos de aprendizaje
+
+## 2. Objetivos de aprendizaje
 ### HTML
 
 - [✔ ] **Uso de HTML semántico**
