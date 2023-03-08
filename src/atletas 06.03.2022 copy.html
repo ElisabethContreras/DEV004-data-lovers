@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-CL"> <!-- siempre se debe ingresar el tipo de lenguaje de la pagina. -->
+<html lang="es"> <!-- siempre se debe ingresar el tipo de lenguaje de la pagina. -->
 
 <head>
   <meta charset="utf-8"> <!--  -->
@@ -10,43 +10,33 @@
   <!-- insertar mini-logo en pestaña de inicio -->
   <title>JJOO Rio Jainero 2016 Atletas</title> <!-- nombre pestaña inicio -->
   <link rel="stylesheet" href="atletas.css" />
- </head>
+  <!-- <link rel="stylesheet" href="atletas-max733-chica.css" /> -->
+  <!-- <link rel="stylesheet" href="atletas.css" /> -->
+  <!-- <link rel="stylesheet" href="atletas.css" /> -->
+</head>
 
 <body>
   <!-- Cabecera de la pagina -->
   <header>
     <!-- <div id="contenedor-portada-general"> -->
     <section class="portada" id="contenedor-portada"> <!-- se pueden agregar, cambiar, etc -->
+      <img class="logo-cabecera-uno" src="Imagenes/generales/cabecera1.png" width="" height="" alt="">
       <img class="logo-cabecera-dos" src="Imagenes/generales/rio2.png" width="" height="" alt="">
+
+      <!-- <img class="imagen-inicial" src="Imagenes/generales/rio2.png" width="100" height="100" alt="">
+          <img class="imagen-mascotas" src="Imagenes/logo web/logo.png" width="150" height="100" alt=""> -->
     </section>
 
     <section id="menu-btn-volver">
-        <button class="btn-inicial" onclick="window.location.href='./index.html'" ">
-          <img id="volver" src="Imagenes/generales/boton volver.png" alt="">
-        </button>
+      <!-- <nav class="nav-menu-volver"> -->
+        <button class="btn-inicial" onclick="window.location.href='./index.html'">Volver al Inicio.</button>
+      <!-- </nav> -->
     </section>
     <!-- </div> -->
 
     <!-- ********************** -->
     <div class="menu-filtrado" id="menu">
 
-    <!-- <div id="contenedor-portada-general"> -->
-      <section class="portada" id="contenedor-portada"> <!-- se pueden agregar, cambiar, etc -->
-        <img class="logo-cabecera-uno" src="Imagenes/generales/cabecera1.png" width="" height="" alt="">
-        <img class="logo-cabecera-dos" src="Imagenes/generales/rio2.png" width="" height="" alt="">
-    
-        <!-- <img class="imagen-inicial" src="Imagenes/generales/rio2.png" width="100" height="100" alt="">
-          <img class="imagen-mascotas" src="Imagenes/logo web/logo.png" width="150" height="100" alt=""> -->
-      </section>
-    
-      <section id="menu-btn-volver">
-        <nav class="nav-menu-volver">
-          <button class="btn-inicial" onclick="window.location.href='./index.html'" >Volver al Inicio.</button>
-        </nav>
-      </section>
-    <!-- </div> -->
-  </header>
-  <!-- ********************** -->
 
       <!-- <form class="menu-filtrado" id="menu"> -->
       <section class="seccion-buscar">
@@ -68,20 +58,10 @@
         <select class="filtrarSexo dos" name="filtrar" id="sexo-filtrar">
           <!-- <option class="sexo" id="sexo" selected disabled hidden>---</option> -->
           <!-- al colocar *selected disabled hidden* hago que se vea el nombre sexo, pero que no sea cliqueable para la busqueda, hidden=no visible/esconder   -->
-          <option class="sexo tres" id="sexo" value="otros">🧹Limpiar</option>
+          <option class="sexo" id="sexo" value="otros">🧹Mostrar todos</option>
           <option value="F">Femenino</option>
           <option value="M">Masculino</option>
 
-    <!-- ** Filtrar Genero/Sexo -->
-    <section class="seccion-filtrar-sexo filtroUno">
-      <p class="etiqueta texto">Genero</p>
-      <select class="filtrarSexo dos" name="filtrar" id="sexo-filtrar">
-        <option class="sexo" id="sexo" selected disabled hidden>---</option>
-        <!-- al colocar *selected disabled hidden* hago que se vea el nombre sexo, pero que no sea cliqueable para la busqueda, hidden=no visible/esconder   -->
-        <option value="otros">🧹Mostrar todos</option>
-        <option value="F">Femenino</option>
-        <option value="M">Masculino</option>
-       
 
         </select>
       </section>
@@ -90,38 +70,24 @@
       <section class="seccion-filtrar-disciplina filtroUno">
         <p class="etiqueta texto">Disciplina</p>
         <select class="filtrarDisciplina dos" name="filtrar" id="disciplinas-filtrar">
-          <option id="disciplina tres" value="otros">-🧹 Limpiar</option>
+          <option id="disciplina" value="otros">-🧹 Limpiar Filtro -</option>
         </select>
       </section>
-    <!-- ** Filtrar Disciplina  -->
-    <section class="seccion-filtrar-disciplina filtroUno">
-      <p class="etiqueta texto">Disciplina</p>
-      <select class="filtrarDisciplina dos" name="filtrar" id="disciplinas-filtrar">
-        <option id="disciplina" value="otros">-🧹 Limpiar Filtro -</option>
-      </select>
-    </section>
 
       <!-- ** Filtrar Especialidad  -->
       <section class="seccion-filtrar-especialidad filtroUno">
         <p class="etiqueta texto">Especialidad</p>
         <select class="filtrarEspecialidad dos" name="filtrar" id="especialidad-filtrar">
-          <option id="especialidad tres" value="otros">-🧹 Limpiar</option>
+          <option id="especialidad" value="otros">-🧹 Limpiar Filtro -</option>
         </select>
       </section>
-    <!-- ** Filtrar Especialidad  -->
-    <section class="seccion-filtrar-especialidad filtroUno">
-      <p class="etiqueta texto">Especialidad</p>
-      <select class="filtrarEspecialidad dos" name="filtrar" id="especialidad-filtrar">
-        <option id="especialidad" value="otros">-🧹 Limpiar Filtro -</option>
-      </select>
-    </section>
 
       <!-- ** Filtrar Medalla  -->
       <section class="seccion-filtrar-medalla filtroUno">
         <p class="etiqueta texto">Medalla</p>
         <select class="filtrarMedalla dos" name="filtrar" id="medalla-filtrar">
           <!-- <option id="medalla" selected disabled hidden>---</option> -->
-          <option id="medalla tres" value="otros">-🧹 Limpiar</option>
+          <option id="medalla" value="otros">-🧹 Limpiar Filtro -</option>
           <!-- <option value="otros">-🧹 Limpiar Filtro -</option> -->
           <option value="gold">Oro</option>
           <option value="silver">Plata</option>
@@ -129,25 +95,12 @@
 
         </select>
       </section>
-    <!-- ** Filtrar Medalla  -->
-    <section class="seccion-filtrar-medalla filtroUno">
-      <p class="etiqueta texto">Medalla</p>
-      <select class="filtrarMedalla dos" name="filtrar" id="medalla-filtrar">
-        <!-- <option id="medalla" selected disabled hidden>---</option> -->
-        <option id="medalla" value="otros">-🧹 Limpiar Filtro -</option>
-        <!-- <option value="otros">-🧹 Limpiar Filtro -</option> -->
-        <option value="gold">Oro</option>
-        <option value="silver">Plata</option>
-        <option value="bronze">Bronce</option>
-     
-      </select>
-    </section>
 
       <!-- ** Filtrar Pais  -->
       <section class="seccion-filtrar-pais filtroUno">
         <p class="etiqueta texto">Pais</p>
         <select class="filtrarPais dos" name="filtrar" id="pais-filtrar">
-          <option id="pais tres" value="otros">-🧹 Limpiar</option>
+          <option id="pais" value="otros">-🧹 Limpiar Filtro -</option>
           <!-- <option id="pais" selected disabled hidden>---</option> -->
           <!-- <option value="otros">-🧹 Limpiar Filtro -</option> -->
 
@@ -178,15 +131,11 @@
 
 
 
-
-
-
   <main>
     <!-- ** tarjetas  -->
-    <!-- <section class="tarjetas">  -->
-      <!-- <p>hola</p> -->
+    <section>
       <div class="cards-container" id="cards-container"></div>
-    <!-- </section> -->
+    </section>
   </main>
 
 

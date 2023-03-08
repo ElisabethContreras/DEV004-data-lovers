@@ -1,0 +1,68 @@
+
+
+  /* ======================================================================== */
+  @media screen and (max-width: 733px){
+    
+
+    /*SECCION HEADER CABECERA=>BOTON VOLVER*/
+    /* =>SECCION IMAGENES */
+    #contenedor-portada{
+      width: 100%;
+      height: 100px;
+      padding: 0.5px;
+      height: 100px;
+      /* outline: 2px solid green; */
+    
+    }
+    
+    #contenedor-portada>.logo-cabecera-uno {
+      /* padding: 5px; */
+      width: 100%;
+      height: 100px;
+      /* background-size: 100px; */
+    }
+    
+    #contenedor-portada>.logo-cabecera-dos {
+      /* padding: 5px; */
+      width: 100px;
+      height: 100px;
+      display: flex;
+      position: relative;
+      top: -105px ;
+      left: 48%;
+    }
+    
+    /* => SECCION BOTON VOLVER */
+    #menu-btn-volver{
+      width: 100%;
+      height: 25px;
+      display: flex;
+      flex-direction: row-reverse;
+      /* outline: 2px solid yellow; */
+    
+    }.nav-menu-volver{
+      width: 30%;
+      height: 100%;
+      /* outline: 2px solid red; */
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .btn-inicial{
+      width: 80%;
+      height: 100%;
+      border-radius: 20px;
+      border: 1px solid #00ffd5;
+      background-color: #00ffd5;
+    
+    
+      /* width: 100%; */
+    }
+    .btn-inicial:hover{
+      /* cursor: pointer; */
+      cursor: pointer;
+      /* /* transition: .3 ease all; */
+      background: rgb(226, 169, 148);
+      box-shadow: 0px 0px 20px #00ffd5, 0px 0px 0.5px #2BF14B;
+    }
+    /* ------------------------------ */
+      }

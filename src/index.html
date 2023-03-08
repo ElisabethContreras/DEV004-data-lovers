@@ -1,30 +1,40 @@
 <!DOCTYPE html>
-<html lang="es"> <!-- siempre se debe ingresar el tipo de lenguaje de la pagina. --> 
-  <head>
-    <meta charset="utf-8">  <!--  -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- permite que sea respnsiva y que se acomode a cualquier tipo de dispositivo -->
+<html lang="es-CL"> <!-- siempre se debe ingresar el tipo de lenguaje de la pagina. -->
 
-    <link rel="shortcut icon" href="Imagenes/logo web/logo.png" type="image/x-icon"> <!-- insertar mini-logo en pestaña de inicio -->
-    <title>JJOO Rio Jainero 2016 Home</title> <!-- nombre pestaña inicio -->
-    <link rel="stylesheet" href="indexstyle.css" />
-    <!-- <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"> -->
+<head>
+  <meta charset="utf-8"> <!--  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- permite que sea respnsiva y que se acomode a cualquier tipo de dispositivo -->
 
-    
-  </head>
-  <body>
-    <!-- Cabecera de la pagina -->
-    <header>
-      <div id="contenedor-cabecera">
-        <div class="logo-cabecera">
-          <img class="logo-cabecera-uno" src="Imagenes/generales/cabecera1.png" width="" height="" alt="" >
-          <img class="logo-cabecera-dos" src="Imagenes/generales/rio2.png" width="" height="" alt="" >
-        </div>
-      </div>
-    </header>
-    <!-- ********************** -->
-    <main class="imagenes">
+  <link rel="shortcut icon" href="Imagenes/logo web/logo.png" type="image/x-icon">
+  <!-- insertar mini-logo en pestaña de inicio -->
+  <title>JJOO Rio Jainero 2016 Home</title> <!-- nombre pestaña inicio -->
+  <link rel="stylesheet" href="indexstyle.css" />
+  <!-- <link rel="stylesheet" href="indexStylePantalla2.css"/> -->
 
-       <!-- Seccion carrusel con imagenes -->
+ 
+</head>
+<!-- <script> 
+  alert("La resolución de tu pantalla es: " + screen.width + " x " + screen.height) 
+</script> -->
+
+<!-- <script src="https://gist.github.com/eendaworks/4044300.js"></script> -->
+
+<!-- <script> 
+  alert(" 2 La resolución de tu pantalla es: " tam )
+
+</script> -->
+
+
+<body>
+  <!-- Cabecera de la pagina -->
+  <header>
+    <img class="logo-cabecera-dos" src="Imagenes/generales/rio2.png" width="" height="" alt="">
+  </header>
+
+  <main >
+    <div id="imagenes" class="imagenes">
+      <!-- Seccion carrusel con imagenes -->
       <section class="slider">
         <div class="slides">
           <input type="radio" name="radio-btn" id="radio1">
@@ -32,106 +42,69 @@
           <input type="radio" name="radio-btn" id="radio3">
           <input type="radio" name="radio-btn" id="radio4">
           <input type="radio" name="radio-btn" id="radio5">
-          <input type="radio" name="radio-btn" id="radio6">
-  
-          <div class="slide first"><img src="./Imagenes/carrusel/canada.png"></div>
-          <div class="slide"><img src="./Imagenes/carrusel/china.png" width="" alt=""></div>
+    
+          <div class="slide first"><img src="./Imagenes/carrusel/china.png"></div>
           <div class="slide"><img src="./Imagenes/carrusel/espana.png" width="" alt=""></div>
           <div class="slide"><img src="./Imagenes/carrusel/india.png" width="" alt=""></div>
           <div class="slide"><img src="./Imagenes/carrusel/tailandia.png" width="" alt=""></div>
           <div class="slide"><img src="./imagenes/carrusel/todas.png" width="" alt=""></div>
         </div>
-  
+    
         <div class="navigation-manual">
           <label for="radio1" class="manual-btn"></label>
           <label for="radio2" class="manual-btn"></label>
           <label for="radio3" class="manual-btn"></label>
           <label for="radio4" class="manual-btn"></label>
           <label for="radio5" class="manual-btn"></label>
-          <label for="radio6" class="manual-btn"></label>
         </div>
       </section>
+    </div>
 
-    
+    <!--/* ==================================================== */ -->
       <!-- Texto de Introduccion de los juegos olimpicos -->
-      <section class="informativo">
-        <br><br>
-        <h2><p class="parrafo1">Sean bienvenidos a los Juegos Olimpicos Rio 2016!</p></h2>
-        <br><br>
-        <!-- <p class="parrafo2">**** Introducir texto de los juegos olimpicos***** </p> -->
-         <p class="parrafo2"> Como siempre en los JJOO se debe mostrar un logo o imagen representativa de estos. Brasil no se quedó atrás,
+      <section id="informativo" class="informativo">
+        
+      
+        <h2><p class="parrafo1">Bienvenidos a los Juegos Olimpicos Rio 2016!</p></h2>
+        <p class="parrafo2"> Como siempre en los JJOO se debe mostrar un logo o imagen representativa de estos. Brasil no se quedó atrás,
            presentando como logo la silueta de tres personas tomadas de las manos en una especie de movimiento armonioso 
            que busca emular la silueta del cerro Pan de Azúcar. De esta manera, el logo de 
           las Olimpiadas 2016 simboliza el deporte y la armonía, a la vez que representa a Rio de Janeiro con la forma de
            uno de sus monumentos más importantes y a todo Brasil, ya que cada figura lleva uno de los colores de la bandera
             nacional: amarillo, verde y azul.
+        </p>
+        <p class="parrafo3">
           Como mascota tenemos a Vinicius, la mascota oficial de los JJOO 2016. Este ser simboliza la fauna de rio, siendo
            una mezcla de sus ágiles felinos, pícaros monos y ligeros pájaros. El acompañante de Vinicius es Tom, la mascota 
            oficial de los Juegos Paralímpicos 2016 que representa a la flora de Rio de Janeiro.
         </p>
       </section>
-      <!-- ********************** -->
+
+    <!--/* ==================================================== */ -->
     <div id="contenedorMenu">
+      <div class="imagen-izq" id="imagenIzq">
+        <img class="gif-uno" src="./Imagenes/gif animados/antorcha.gif" alt="mascotasMov" ></img>
+      </div>
+      <div class="imagen-texto">
+        <nav class="nav-menu">
+          <p class="texto-uno">¿ Qué te gustaria hacer ? </p>
+          <br>
+          <button class="btn-uno" onclick="window.location.href='./atletas.html'">Ver todos los Atletas.</button>
+        </nav>
+      </div>
+      <div class="imagen-der" id="imagenDer">
+        <img class="gif-dos" src="./Imagenes/gif animados/mascotas.gif" alt="mascotasMov" width="150" height="150"></img>
+      </div>
+  </div>  
 
-        <div class="imagen-izq" id="imagenIzq">
-          <!-- <img class="gif-uno" src="https://media.tenor.com/QcsJFmwmZtoAAAAC/olympics-rio.gif" alt="mascotasMov" width="150" height="150"></img> -->
-          <img class="gif-uno" src="./Imagenes/gif animados/antorcha.gif" alt="mascotasMov" width="150" height="150">
+</main>
 
-        </div>
+  <script src="index.js" type="module"></script>
+  <!-- llamo al contador del tiempo de transicion ente las imagenes del carrusel -->
 
-        <div class="imagen-texto">
-          <nav class="nav-menu">
-            <!-- <label for="btn-inicial">¿ Qué te gustaria hacer ? </label> -->
-            <p class="texto-uno">¿ Qué te gustaria hacer ? </p>
-            <br><br>
-            <button class="btn-uno" onclick="window.location.href='./atletas.html'">Ver todos los Atletas.</button>
-            <br><br>
-            <!-- <button class="btn-uno" onclick="window.location.href='./xxx.html'">Buscar un Pais.</button> -->
-          </nav>
-        </div>
+</body>
+<footer id="fot">
+    <p class="footer">@Copyright 2023 JJOO Rio 2016. Todos los derechos reservados</p>
+</footer>
 
-        <div class="imagen-der" id="imagenDer">
-          <img class="gif-uno" src="./Imagenes/gif animados/mascotas.gif" alt="mascotasMov" width="150" height="150">
-        </div>
-    </div>  
-    
-    
-    <!-- <select class="filter" id="species-filter">
-      <option id="Espécie" selected disabled hidden>Espécie</option>
-
-<option value="perro">&🐶	; Perro</option>
-      <option value="chile">&#127752; &#x1f1e8; &#x1f1f1;chile</option>
-      <option value="xxxx">&#127464; &#127473; Chile 2</option>
-      <option value="xxxx">&#127988; xxxxx</option>
-      <option value="Disease"><i class="em em-flag-cl" aria-role="presentation" aria-label="Chile Flag"></i>	; Doença</option>
-      <option value="Human">&#129485; Humano</option>
-     
-      <i class="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
-    </select>
-    <i class="em em-bird" aria-role="presentation" aria-label="BIRD"></i>
-    <i class="em em-flag-cl" aria-role="presentation" aria-label="Chile Flag"></i> -->
-    
-      <!-- <div id="root"></div>
-      <p>Selecciona el pais a buscar.</p>
-      <select id="mySelect">
-    
-    
-      </select>
-     -->
-    
-    </main>
-
-    
-    
-
-
-
-    <!-- <script type="text/javascript" src="/data/athletes/athletes.js"></script> -->
-    
-    <script src="index.js" type="module"></script> <!-- llamo al contador del tiempo de transicion ente las imagenes del carrusel -->
- 
-  </body>
-  <footer>
-    <p class="footer">@Copyright 2023 JJOO Rio 2016.Todos los derechos reservados</p>
-  </footer>
 </html>
