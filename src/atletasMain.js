@@ -6,7 +6,7 @@ import athletes from './data/athletes/athletes.js';
 import data from './data/athletes/athletes.js';// importo toda la bbdd desde atletas.js, que ya fue exportada desde el .json a js
 
 //Declaracion de variables
-const infoAtletas = data.athletes.slice(0,20);//esta var me muestra todos los datos de los atletas//Guardo los resultados de la data del js en una variable
+const infoAtletas = data.athletes;//.slice(0,20);//esta var me muestra todos los datos de los atletas//Guardo los resultados de la data del js en una variable
 const buscarNombrePersona = document.getElementById("busqueda");//asigno a var buscarNombreAtleta el input que se encuentra en html por medio del id"busqueda"
 const seleccionarSexoAtleta = document.getElementById("sexo-filtrar"); //se coloca el id del select en html
 const seleccionarDisciplina = document.getElementById("disciplinas-filtrar");//se coloca el id del select en html
@@ -34,27 +34,66 @@ SeleccionarOrdenAlfabetico.addEventListener("change", mostrarOrdenAlfabetico);
 function printCards(data) {
   document.getElementById("cards-container").innerHTML = data.map((item) =>
     `<section class="caja">
-  <figure>
-     <h2 class="nombre">${item.name}</h2>
-     <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
-        <figcaption class="trasera">
-           <div class="infotarjetas">
-               <p class="tamaño-parrafo" ><strong class="tamaño-texto"> Sexo: </strong> ${item.gender} </p>
-               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Altura: </strong> ${item.height} </p>
-               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Peso: </strong> ${item.weight} </p>
-               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Disciplina: </strong> ${item.sport} </p>
-               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Equipo: </strong> ${item.team} </p>
-               <p class="tamaño-parrafo"><strong class="tamaño-texto"> País: </strong> ${item.noc} </p>
-               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Edad: </strong> ${item.age} </p>
-               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Especialidad: </strong> ${item.event} </p>
-               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Medalla: </strong> ${item.medal} </p>
-           </div>
-       </figcaption>
-   </figure>
+      <figure>
+        <h2 class="nombre">${item.name}</h2>
+        <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
+          <figcaption class="trasera">
+              <div class="infotarjetas">
+                <p class="tamaño-parrafo" ><strong class="tamaño-texto"> Sexo: </strong> ${item.gender} </p>
+                <p class="tamaño-parrafo"><strong class="tamaño-texto"> Altura: </strong> ${item.height} </p>
+                <p class="tamaño-parrafo"><strong class="tamaño-texto"> Peso: </strong> ${item.weight} </p>
+                <p class="tamaño-parrafo"><strong class="tamaño-texto texto1"> Disciplina: </strong> ${item.sport} </p>
+                <p class="tamaño-parrafo"><strong class="tamaño-texto"> Equipo: </strong> ${item.team} </p>
+                <p class="tamaño-parrafo"><strong class="tamaño-texto"> País: </strong> ${item.noc} </p>
+                <p class="tamaño-parrafo"><strong class="tamaño-texto"> Edad: </strong> ${item.age} </p>
+                <p class="tamaño-parrafo"><strong class="tamaño-texto texto2"> Especialidad: </strong> ${item.event} </p>
+                <p class="tamaño-parrafo"><strong class="tamaño-texto"> Medalla: </strong> ${item.medal} </p>
+              </div>
+          </figcaption>
+      </figure>
 
-</section>
-    `).join('');
+    </section>
+  `).join('');
 }
+/*original elisabeth*/ 
+// function printCards(data) {
+//   document.getElementById("cards-container").innerHTML = data.map((item) =>
+//     `<section class="caja">
+//       <figure>
+//         <h2 class="nombre">${item.name}</h2>
+//         <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
+//           <figcaption class="trasera">
+//               <div class="infotarjetas">
+//                 <p class="tamaño-parrafo" ><strong class="tamaño-texto"> Sexo: </strong> ${item.gender} </p>
+//                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Altura: </strong> ${item.height} </p>
+//                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Peso: </strong> ${item.weight} </p>
+//                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Disciplina: </strong> ${item.sport} </p>
+//                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Equipo: </strong> ${item.team} </p>
+//                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> País: </strong> ${item.noc} </p>
+//                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Edad: </strong> ${item.age} </p>
+//                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Especialidad: </strong> ${item.event} </p>
+//                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Medalla: </strong> ${item.medal} </p>
+//               </div>
+//           </figcaption>
+//       </figure>
+
+//     </section>
+//   `).join('');
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 printCards(infoAtletas);
 
 // function imprimirData (data){
