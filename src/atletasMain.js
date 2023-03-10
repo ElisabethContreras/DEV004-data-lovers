@@ -1,4 +1,3 @@
-
 //aqui se deben agregar las demas importaciones
 import { buscarNombre, filtrarSexo, filtrarDisciplina, filtrarEspecialidad, filtrarMedalla, filtrarPais,ordenAlfabetico,calcularPorcentaje } from './data.js'; //aqui se deben agregar las demas importaciones
 import athletes from './data/athletes/athletes.js';
@@ -6,7 +5,7 @@ import athletes from './data/athletes/athletes.js';
 import data from './data/athletes/athletes.js';// importo toda la bbdd desde atletas.js, que ya fue exportada desde el .json a js
 
 //Declaracion de variables
-const infoAtletas = data.athletes;//.slice(0,20);//esta var me muestra todos los datos de los atletas//Guardo los resultados de la data del js en una variable
+const infoAtletas = data.athletes.slice(0,20);//esta var me muestra todos los datos de los atletas//Guardo los resultados de la data del js en una variable
 const buscarNombrePersona = document.getElementById("busqueda");//asigno a var buscarNombreAtleta el input que se encuentra en html por medio del id"busqueda"
 const seleccionarSexoAtleta = document.getElementById("sexo-filtrar"); //se coloca el id del select en html
 const seleccionarDisciplina = document.getElementById("disciplinas-filtrar");//se coloca el id del select en html
@@ -51,7 +50,6 @@ function printCards(data) {
               </div>
           </figcaption>
       </figure>
-
     </section>
   `).join('');
 }
@@ -171,7 +169,7 @@ function llenadoOpcionesDisciplinas(options_list) {
       arraySports.push(options.athletes[index].sport);
     }
   }
-  // Ordenar el array alfabéticamente tomando todas como minúsculas
+  // Ordenar el array alfabéticamente
   arraySports.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
   // Recorrer el array ordenado y agregar cada opción al select
@@ -235,19 +233,19 @@ function llenadoOpcionesEspecialidad(options_list) {
 }
 llenadoOpcionesEspecialidad(athletes);
 
-function mostrarResultadosFiltrarEspecialidad(event) {
+function mostrarResultadosFiltrarEspecialidad() {
   if (this.value==="otros") {
     printCards(infoAtletas);
   }else{
     const valorSeleccionadoEspecialidad = seleccionarEspecialidad.value;
     const seleccionEspecialidad = filtrarEspecialidad(infoAtletas, valorSeleccionadoEspecialidad);
-  printCards(seleccionEspecialidad);
-  mostrarPorcentaje(infoAtletas, seleccionEspecialidad);
-  seleccionarSexoAtleta.options[(seleccionarSexoAtleta.selectedIndex=[0])];
-  seleccionarDisciplina.options[(seleccionarDisciplina.selectedIndex=[0])];
-  // seleccionarEspecialidad.options[(seleccionarEspecialidad.selectedIndex=[0])];
-  seleccionarMedalla.options[(seleccionarMedalla.selectedIndex=[0])];
-  seleccionarPais.options[(seleccionarPais.selectedIndex=[0])];
+    printCards(seleccionEspecialidad);
+    mostrarPorcentaje(infoAtletas, seleccionEspecialidad);
+    seleccionarSexoAtleta.options[(seleccionarSexoAtleta.selectedIndex=[0])];
+    seleccionarDisciplina.options[(seleccionarDisciplina.selectedIndex=[0])];
+    // seleccionarEspecialidad.options[(seleccionarEspecialidad.selectedIndex=[0])];
+    seleccionarMedalla.options[(seleccionarMedalla.selectedIndex=[0])];
+    seleccionarPais.options[(seleccionarPais.selectedIndex=[0])];
   }
   
 }
@@ -257,15 +255,15 @@ function mostrarResultadosFiltrarMedalla() {
   if (this.value==="otros") {
     printCards(infoAtletas);
   }else{
-     const valorSeleccionadoMedalla = seleccionarMedalla.value;
-     const seleccionMedalla = filtrarMedalla(infoAtletas, valorSeleccionadoMedalla);
-     printCards(seleccionMedalla);
-     mostrarPorcentaje(infoAtletas, seleccionMedalla);
-     seleccionarSexoAtleta.options[(seleccionarSexoAtleta.selectedIndex=[0])];
-     seleccionarDisciplina.options[(seleccionarDisciplina.selectedIndex=[0])];
-     seleccionarEspecialidad.options[(seleccionarEspecialidad.selectedIndex=[0])];
+    const valorSeleccionadoMedalla = seleccionarMedalla.value;
+    const seleccionMedalla = filtrarMedalla(infoAtletas, valorSeleccionadoMedalla);
+    printCards(seleccionMedalla);
+    mostrarPorcentaje(infoAtletas, seleccionMedalla);
+    seleccionarSexoAtleta.options[(seleccionarSexoAtleta.selectedIndex=[0])];
+    seleccionarDisciplina.options[(seleccionarDisciplina.selectedIndex=[0])];
+    seleccionarEspecialidad.options[(seleccionarEspecialidad.selectedIndex=[0])];
     //  seleccionarMedalla.options[(seleccionarMedalla.selectedIndex=[0])];
-     seleccionarPais.options[(seleccionarPais.selectedIndex=[0])];
+    seleccionarPais.options[(seleccionarPais.selectedIndex=[0])];
   }
  
 }

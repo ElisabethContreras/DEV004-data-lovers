@@ -1,335 +1,341 @@
 /* DISEÑO MOBILE FIRST GALAXY A51/71 */
 body{
-padding: 0px;
-  outline: 2px solid violet;
-
-
-}
-/* HEADER*/
-/* SECCION PORTADA IMAGEN Y LOGO CABECERA*/
-#contenedor-portada{
-  background:url(Imagenes/generales/cabecera1.png) ;
-  background-repeat: no-repeat;
-  background-size: 230%;
-  width: 100%;
-  height: 63px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-  justify-content: space-around;
-  outline: 2px solid blue;
-}
-.logo-cabecera-dos {
-  /* padding: 0px 0px 0px 0px; */
-  padding: 2.5px;
-  width: 10%;
-  outline: 2px solid red;
-}
-/*------------------------------------------------------------*/
-
-/* SECCION BOTON VOLVER*/
-#menu-btn-volver {
-  width: 100%;
-  height: 20px;
-  display: flex;
-  justify-content: flex-end;
-  outline: 2px solid yellow;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.btn-inicial{
-  width: 6%;
-  height: 99%;
-  display: flex;
-  outline: 2px solid red;
   padding: 0px;
-  border: 0px;
 
-  /* justify-content: flex-end;  */
-} 
-
-#volver{
-  width: 100%; /*tamaño de la casita*/
-  height: 99%;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-/*SECCION FORMULARIO*/
-#menu{   
-  height: 60px;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  /* justify-content: space-around; */
-  outline: 2px solid green;
-}
-/*------------------------------------*/
-/* seccion buscar*/
-.seccion-buscar{
-  width:100%;
-  padding: 0.5%;
-  /* outline: 1px solid  red; */
-}
-.buscar{ /* CAMPO BUSCAR */
-  width: 100%;
-  height: 20px;
-  padding: 1%;
-  background: transparent;
-  /* color: #87f583; */
-  border: 1px solid #87f583;
-  border-radius: 20px;
-  /* display: flex; */
-  /* justify-content: flex-start; */
- 
-}
-
-/*------------------------------------*/
-
-.filtroUno{
-  width:15%;
-  padding: 0.4%;
-  margin: 0%;
-  /* display: block; */
-  outline: 1px solid  red;
-}
-.texto{ /*Afecta solamente al texto de la etiqueta P de Genero/Disciplina/Especialidad/Medalla/Pais/Ordenar*/
-  font-size: 75%;
-}
-.etiqueta{
-  width:100%;
-  padding: 2%;
-  padding-bottom: 2%;
-  margin: 0%;
-  text-align: center;
-  /* padding: 0.5%; */
-  /* display: block; */
-  outline: 1px solid  black;
-}
-.dos{
-  width:100%;
-  height: 40%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin: 2%;
-  font-size: 58%;
-  text-align: center;
-  border: 1px solid #87f583;
-  border-radius: 20px;
-   outline: 1px solid  yellow;
-}
-.seccion-filtrar-disciplina{
-  width: 18%;
-}
-
-.seccion-filtrar-especialidad{
-  width:20%;
-}
-
-.seccion-ordenar-nombres{
-  width: 12%;
-}
-option{
-  font-size: 90%;
-}
-
-/*------------------------------------------------------------*/
-
-/* SECCION MOSTRAR RESULTADO DE PORCENYAJES DE LA SELECCION DESPLEGADA*/
-
-.porcentaje {
-  width: 99%;
-  height: 20px;
-  margin: 0.5%;
-  outline: 2px solid cornflowerblue;
-  text-align: center;
-  font-size: 75%;
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-
-/*------------------------------------------------------------*/
-/* MAIN*/
-/* SECCION PORTADA IMAGEN Y LOGO CABECERA*/
-
-main{
-  margin-top: 2%;
-  margin-left: 0%;
-  margin-right: 0%;
-
-  outline:2px solid blue;
-  width: 99%;/*100%;*/
-
-}
-
-.cards-container {
-  width: 100%;/*100%;*/
-  height: 100%;
-  margin: 0.5px;
-  display: flex;
-  flex-direction: row; /* el flex direction le dice la dirección de las cajas , en este caso en fila*/
-  flex-wrap: wrap; /* es para adecuarse al tamaño de lla pantalla*/
-
-  align-content: center;
-  /* justify-content: space-between; */
-  justify-content: center;
-
-  /* font-size:medium; */
-  outline: 2px solid turquoise;
-}
-
-.caja{
-  margin: 1%;
-  width: 29%;
-  height: 200px; /*25%;*/
-  outline: 2px solid green;
-
- }
- .caja:hover figure{ /*se pone el nombre del div + figure para que al seleccionar el primero, tome recien el segundo*/
-  transform:perspective(600px) rotateY(180deg);
-  box-shadow: 0px 2px 10px 2px;
-  /* outline: 2px solid red; */
-
-}
-
-figure{
-  width: 100%;
-  height:100%;
-  margin: 0;
-  position: relative;
-  border-radius: 26PX; /*50px;*/
-  transition: all ease .5s;
-  transform-style: preserve-3d; /*al ser 3d, los hijos igual tendran esta propiedad*/
-  transform: perspective(600px) rotateY(0deg); /*le da una perspectiva a la imagen, además de rotarla en el eje Y*/
-  box-shadow: 0px 2px 10px 2px;
-  outline: 2px solid blue;
-  display: flex;
-
-}
-figure .nombre{
-  width: 96%;
-  height: 119px;
-  display: flex;
-  position: absolute;
-  top: 41%;
-  left: 49%;
-  transform: translate(-50%, -50%);
-  font-size: 82%;
-  text-align: center;
-  color: rgba(7, 6, 6, 0.925);
-  backface-visibility: hidden;
-  outline: 2px solid red;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  /* opacity: 0.2; */
-  /* border-radius: 0px; */
-  /* background-color: aquamarine; */
-  }
-
-
-
-  figure .frontal,
-  figure .trasera{
-    width: 100%;
-    height: 100%;
-    /* display: block; */
-    /* opacity: 0.2; */
-    /* border-radius: 50px; */
-    /* background-color: aquamarine; */
-   }
-   figure .frontal{
-    display: block;
-    backface-visibility:hidden;
-    top: 0;
-    opacity: 0.2;
-    /* background-color: rgba(114, 219, 140, 0.952) */
-    /* outline: 2px solid green; */
-   }
-   figure .trasera{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    padding: 0px;
-    color: rgba(19, 17, 17, 0.925);
-    /*line-height: 20px;*/ /*Interlineado*/
-    /*************************************     VOLVER A ACTIVAR *************** */
-    transform: perspective(600px) rotateY(180deg);  
-    backface-visibility: hidden;
-    overflow: auto;
-    background-color: rgb( 232, 248, 245 );
-    border-radius: 26PX; /*50px;*/
-
-    outline: 2px solid green;
-}
-  .infotarjetas {
-    width: 93%;
-    height: 160px;
-    margin-top: 18%;
-    margin-left: 4px;
-    text-align: left;
-    word-wrap: break-word;
-    outline: 2px solid orangered;
-    /* line-height: 5px; */
-}
-
-
-
-
-.tamaño-texto{ /* el titulo de la actividad de la data */
-  font-size:11px;
-  font-weight: bold;
-  /* display: flex; */
-
-  /* outline: 2px solid green; */
-
-}
-
-.tamaño-parrafo{ /* la actividad que traemos de la data*/
-  /* display: flex; */
-  /* height: 2px; */
-  font-size:11px;
-  margin: 2px;
-/*line-height: 5px; /*interlineado*/
- /* outline: 2px solid red; */
- /* padding: 2%; */
-
-}
-
-.texto1{
-  line-height: 7px; /*interlineado*/
+  /* outline: 2px solid violet; */
   
   }
-
-.texto2{
-  /*line-height: 7px; /*interlineado*/
-  line-height: 1.5px;
-  word-wrap: break-word;
-
-
- outline: 2px solid blue;
-
-
-}
-
-
-
-
-/* *********************************************************** */
-
-
-
-
-
-
-
-
-/***************************Desarrollo ely *************************************/ 
+  /* HEADER*/
+  /* SECCION PORTADA IMAGEN Y LOGO CABECERA*/
+  #contenedor-portada{
+    background:url(Imagenes/generales/cabecera1.png) ;
+    background-repeat: no-repeat;
+    background-size: 230%;
+    width: 100%;
+    height: 63px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    /* outline: 2px solid blue; */
+  }
+  .logo-cabecera-dos {
+    /* padding: 0px 0px 0px 0px; */
+    padding: 2.5px;
+    width: 10%;
+    /* outline: 2px solid red; */
+  }
+  /*------------------------------------------------------------*/
+  
+  /* SECCION BOTON VOLVER*/
+  #menu-btn-volver {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    /* outline: 2px solid yellow; */
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .btn-inicial{
+    width: 6%;
+    height: 99%;
+    display: flex;
+    /* outline: 2px solid red; */
+    padding: 0px;
+    border: 0px;
+  
+    /* justify-content: flex-end;  */
+  } 
+  
+  #volver{
+    width: 100%; /*tamaño de la casita*/
+    height: 99%;
+    display: flex;
+    align-items: center;
+  }
+  
+  #volver:hover{
+    cursor: pointer;
+    transition: 5.40 ease all; 
+    box-shadow: 0px 0px 20px #00ffd5, 0px 0px 0.5px #2BF14B;
+    background: rgb(226, 169, 148);
+  }
+  
+  
+  
+  /*------------------------------------------------------------*/
+  
+  
+  /*SECCION MENU ID=MENU -> area de seleccion de filtrdos*/
+  #menu {
+    width: 99%;
+    height:70px; /*70px;*/
+    margin: 0.5%;
+    /* margin-bottom: 1%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /* justify-content: space-around; */
+    /* outline: 2px solid green; */
+  }
+  /*------------------------------------*/
+  /* seccion buscar*/
+  .seccion-buscar{
+    width:100%;
+    padding: 0.5%;
+    /* outline: 1px solid  red; */
+  }
+  .buscar{ /* CAMPO BUSCAR */
+    width: 100%;
+    height: 20px;
+    padding: 1%;
+    background: transparent;
+    /* color: #87f583; */
+    border: 1px solid #87f583;
+    border-radius: 20px;
+    /* display: flex; */
+    /* justify-content: flex-start; */
+   
+  }
+  
+  /*------------------------------------*/
+  
+  .filtroUno{
+    width:15%;
+    padding: 0.4%;
+    margin: 0%;
+    /* display: block; */
+    /* outline: 1px solid  red; */
+  }
+  .texto{ /*Afecta solamente al texto de la etiqueta P de Genero/Disciplina/Especialidad/Medalla/Pais/Ordenar*/
+    font-size: 75%;
+  }
+  .etiqueta{
+    width:100%;
+    padding: 2%;
+    padding-bottom: 2%;
+    margin: 0%;
+    text-align: center;
+    /* padding: 0.5%; */
+    /* display: block; */
+    /* outline: 1px solid  black; */
+  }
+  .dos{
+    width:100%;
+    height: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin: 2%;
+    font-size: 58%;
+    text-align: center;
+    border: 1px solid #87f583;
+    border-radius: 20px;
+    /* outline: 1px solid  yellow; */
+  }
+  .seccion-filtrar-disciplina{
+    width: 18%;
+  }
+  
+  .seccion-filtrar-especialidad{
+    width:20%;
+  }
+  
+  .seccion-ordenar-nombres{
+    width: 12%;
+  }
+  option{
+    font-size: 90%;
+  }
+  
+  /*------------------------------------------------------------*/
+  
+  /* SECCION MOSTRAR RESULTADO DE PORCENYAJES DE LA SELECCION DESPLEGADA*/
+  
+  .porcentaje {
+    width: 99%;
+    height: 20px;
+    margin: 0.5%;
+    /* outline: 2px solid cornflowerblue; */
+    text-align: center;
+    font-size: 75%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  
+  /*------------------------------------------------------------*/
+  /* MAIN*/
+  /* SECCION PORTADA IMAGEN Y LOGO CABECERA*/
+  
+  main{
+    margin-top: 2%;
+    margin-left: 0%;
+    margin-right: 0%;
+    /* outline:2px solid blue; */
+    width: 99%;/*100%;*/
+  
+  }
+  
+  .cards-container {
+    width: 100%;/*100%;*/
+    height: 100%;
+    margin: 0.5px;
+    display: flex;
+    flex-direction: row; /* el flex direction le dice la dirección de las cajas , en este caso en fila*/
+    flex-wrap: wrap; /* es para adecuarse al tamaño de lla pantalla*/
+  
+    align-content: center;
+    /* justify-content: space-between; */
+    justify-content: center;
+  
+    /* font-size:medium; */
+    /* outline: 2px solid turquoise; */
+  }
+  
+  .caja{
+    margin: 1%;
+    width: 30%;
+    max-width: 500px;
+    height: auto;
+    padding: 3%;
+    /* outline: 2px solid green; */
+  
+   }
+   .caja:hover figure{ /*se pone el nombre del div + figure para que al seleccionar el primero, tome recien el segundo*/
+    transform:perspective(600px) rotateY(180deg);
+    box-shadow: 0px 2px 10px 2px;
+    /* outline: 2px solid red; */
+  
+  }
+  
+  figure{
+    width: 100%;
+    height:100%;
+    margin: 0;
+    position: relative;
+    border-radius: 26PX; /*50px;*/
+    transition: all ease .5s;
+    transform-style: preserve-3d; /*al ser 3d, los hijos igual tendran esta propiedad*/
+    transform: perspective(600px) rotateY(0deg); /*le da una perspectiva a la imagen, además de rotarla en el eje Y*/
+    box-shadow: 0px 2px 10px 2px;
+    outline: 2px solid blue;
+    display: flex;
+  
+  }
+  figure .nombre{
+    width: 96%;
+    height: 119px;
+    display: flex;
+    position: absolute;
+    top: 41%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    font-size: 82%;
+    text-align: center;
+    color: rgba(7, 6, 6, 0.925);
+    backface-visibility: hidden;
+    /* outline: 2px solid red; */
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    /* opacity: 0.2; */
+    /* border-radius: 0px; */
+    /* background-color: aquamarine; */
+    }
+  
+  
+  
+    figure .frontal,
+    figure .trasera{
+      width: 100%;
+      height: 100%;
+      /* display: block; */
+      /* opacity: 0.2; */
+      /* border-radius: 50px; */
+      /* background-color: aquamarine; */
+     }
+     figure .frontal{
+      display: block;
+      backface-visibility:hidden;
+      top: 0;
+      opacity: 0.2;
+      /* background-color: rgba(114, 219, 140, 0.952) */
+      /* outline: 2px solid green; */
+     }
+     figure .trasera{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      padding: 0px;
+      color: rgba(19, 17, 17, 0.925);
+      /*line-height: 20px;*/ /*Interlineado*/
+      /*************************************     VOLVER A ACTIVAR *************** */
+      transform: perspective(600px) rotateY(180deg);  
+      backface-visibility: hidden;
+      overflow: auto;
+      background-color: rgb( 232, 248, 245 );
+      border-radius: 26PX; /*50px;*/
+  
+      /* outline: 2px solid green; */
+  }
+    .infotarjetas {
+      width: 93%;
+      height: 160px;
+      margin-top: 18%;
+      margin-left: 4px;
+      text-align: left;
+      word-wrap: break-word;
+      outline: 2px solid orangered;
+      /* line-height: 5px; */
+  }
+  
+  
+  
+  
+  .tamaño-texto{ /* el titulo de la actividad de la data */
+    font-size:11px;
+    font-weight: bold;
+    /* display: flex; */
+  
+    /* outline: 2px solid green; */
+  
+  }
+  
+  .tamaño-parrafo{ /* la actividad que traemos de la data*/
+    /* display: flex; */
+    /* height: 2px; */
+    font-size:11px;
+    margin: 2px;
+  /*line-height: 5px; /*interlineado*/
+   /* outline: 2px solid red; */
+   /* padding: 2%; */
+  
+  }
+  
+  .texto1{
+    line-height: 7px; /*interlineado*/
+    
+    }
+  
+  .texto2{
+    /*line-height: 7px; /*interlineado*/
+    line-height: 1.5px;
+    word-wrap: break-word;
+  
+  
+   /* outline: 2px solid blue; */
+  
+  
+  }
+  
+  
+  
+  
+  /* *********************************************************** */
+  
