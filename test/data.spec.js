@@ -190,13 +190,3 @@ describe('ordenAlfabetico',() => {
     //console.log(opcionOrdenDescendente);
   });
 });
-// describe('calcularPorcentaje',() => {
-//   it('Debería ser una función', () => {
-//     expect(typeof calcularPorcentaje).toBe('function');
-//   });
-//   it('Retorna el número de atletas y porcentaje que representan del total.', () => {
-//     const opcionCalcular =calcularPorcentaje(infoAtletas, ''); // Act
-//     expect().toEqual(expect.arrayContaining(opcionCalcular),);
-//     //console.log(opcionOrdenAscendente);
-//   });
-// });
