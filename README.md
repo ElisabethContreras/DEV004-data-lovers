@@ -35,9 +35,9 @@ También se realizaron test para cada funcionalidad, desde la historia 2 en adel
 
 ## 1.1 Prototipos de baja y alta fidelidad
 
-* [Prototipo baja fidelidad Home](/src/Imagenes/generales/imagen_prototipo_1.png)
+* ![Prototipo baja fidelidad Home](/src/Imagenes/generales/imagen_prototipo_1.png)
 
-* [Prototipo de baja fidelidad data](/src/Imagenes/generales/HU10.png)
+* ![Prototipo de baja fidelidad data](/src/Imagenes/generales/HU10.png)
 
 
 ## 2. Objetivos de aprendizaje
