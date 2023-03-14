@@ -49,7 +49,7 @@ export const ordenAlfabetico = (infoAtletas, orden) => {
 };
 
 export const calcularPorcentaje = (infoAtletas, seleccionar) => {
-  const resultadoPorcentaje = parseFloat((seleccionar.length * 100) / infoAtletas.length).toFixed(2); // parseFloat crea una cadena y devuelve un número como flotante. Es decir, un número decimal.
+  const resultadoPorcentaje = parseFloat((seleccionar.length * 100) / infoAtletas.length) //.toFixed(2); // parseFloat crea una cadena y devuelve un número como flotante. Es decir, un número decimal.
   return resultadoPorcentaje;// toFixed nos permite redondear número aproximados.
 };
 

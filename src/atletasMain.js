@@ -245,6 +245,6 @@ function mostrarOrdenAlfabetico(event) {
 function mostrarPorcentaje(infoAtletas,seleccionar) {
   const resultadoP=calcularPorcentaje(infoAtletas, seleccionar);
   // resultadocalculo.innerHTML="Existen "+ seleccionar.length+" atletas en este filtro y representa "+resultadoP+"% de todos los participantes. "
-  resultadocalculo.innerHTML="Participaron "+ seleccionar.length+" atletas y representan el "+resultadoP+"% de todos los participantes. "
+  resultadocalculo.innerHTML="Participaron "+ seleccionar.length+" atletas y representan el "+resultadoP.toFixed(2)+"% de todos los participantes. "
   
 }
