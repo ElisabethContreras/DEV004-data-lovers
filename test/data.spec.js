@@ -105,24 +105,6 @@ describe('filtrarEspecialidad',() => {
 });
 describe('filtrarMedalla',() => {
   it('Debería ser una función', () => {
-    expect(typeof filtrarMedalla).toBe('function');
-  });
-  it('Retorna lista de atletas que participaron ganaron medallas de oro', () => {
-    const opcionMedalla =filtrarMedalla(infoAtletas, "gold") // Act
-    expect(infoAtletas).toEqual(expect.arrayContaining( opcionMedalla),
-    );
-    // console.log(opcionMedalla);
-        
-  });
-  it('Retorna todas las disciplinas al seleccionar la opción "limpiar filtro"', () => {
-    const todasLasMedallas = filtrarMedalla(infoAtletas, "limpiar filtro");
-    expect(infoAtletas).toEqual(expect.arrayContaining(todasLasMedallas),
-    );
-    // console.log(todasLasMedallas);
-  });
-});
-describe('filtrarMedalla',() => {
-  it('Debería ser una función', () => {
     expect(typeof filtrarPais).toBe('function');
   });
   it('Retorna lista de atletas que participaron ganaron medallas de oro', () => {

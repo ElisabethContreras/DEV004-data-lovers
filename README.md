@@ -33,11 +33,11 @@ Para entender lo que nuestros usuarios requieren o necesitan, nos basamos en 10 
  
 También se realizaron test para cada funcionalidad, desde la historia 2 en adelante.
 
-## 1.1 Prototipos de baja y alta fidelidad
+## 1.1 Prototipos de baja fidelidad
 
-* ![Prototipo baja fidelidad Home](/src/Imagenes/generales/imagen_prototipo_1.png)
+ ![Prototipo baja fidelidad Home](/src/Imagenes/generales/imagen_prototipo_1.png)
 
-* ![Prototipo de baja fidelidad data](/src/Imagenes/generales/HU10.png)
+ ![Prototipo de baja fidelidad data](/src/Imagenes/generales/HU10.png)
 
 
 ## 2. Objetivos de aprendizaje
@@ -191,7 +191,7 @@ También se realizaron test para cada funcionalidad, desde la historia 2 en adel
 
 - [✔] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 
-- [✔] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
+- [] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
 ### Control de Versiones (Git y GitHub)
 
@@ -218,7 +218,7 @@ También se realizaron test para cada funcionalidad, desde la historia 2 en adel
 
 ### Diseño de producto
 
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
+- [] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
 - [✔] **[Seguir los principios básicos de diseño visual](https://coda.io/d/Bootcamp-UX-Contenido_dqkqk2rV9Z2/Diseno-Visual_suOT7#_luWsQ)**
 
