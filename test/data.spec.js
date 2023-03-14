@@ -1,4 +1,4 @@
-import { buscarNombre, filtrarSexo, filtrarDisciplina, filtrarEspecialidad, filtrarMedalla,filtrarPais,ordenAlfabetico, calcularPorcentaje} from '../src/data.js'; // de donde se estan importando los datos
+import { buscarNombre, filtrarSexo, filtrarDisciplina, filtrarEspecialidad, filtrarMedalla,filtrarPais,ordenAlfabetico} from '../src/data.js'; // de donde se estan importando los datos
 import data from '../src/data/athletes/athletes.js';
 
 const infoAtletas = data.athletes.slice(0,10); 
